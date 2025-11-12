@@ -113,6 +113,9 @@ const PaymentTransition = () => {
                 alt="Drupal"
                 className="h-3 sm:h-4 md:h-6 lg:h-8 bg-white p-0.5 sm:p-1 rounded"
               />
+
+
+              
               <img
                 src={logImg} // ✅ use imported image here
                 alt="Drupal"

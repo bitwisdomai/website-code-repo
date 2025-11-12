@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -9,15 +10,18 @@ const Navbar = () => {
       <div className="flex justify-between items-center px-6 md:px-16 lg:px-24 xl:px-32 py-4">
         {/* Left Section - Nav Links */}
         <div className="hidden lg:flex items-center space-x-10 text-[15px] font-medium tracking-tight">
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="text-cyan-400 hover:text-cyan-300 transition"
           >
             Home
-          </a>
-          <a href="#about" className="hover:text-cyan-400 transition">
+          </Link>
+          <Link to="/about" className="hover:text-cyan-400 transition">
             About
-          </a>
+          </Link>
+          <Link to="/blog" className="hover:text-cyan-400 transition">
+            Blog
+          </Link>
 
           <div className="relative group">
             <button className="hover:text-cyan-400 transition flex items-center gap-1">
@@ -41,15 +45,15 @@ const Navbar = () => {
             </div>
           </div>
 
-          <a
-            href="#qualify"
+          <Link
+            to="/qualifying"
             className="hover:text-cyan-400 transition whitespace-nowrap"
           >
             Qualifying BW Customers
-          </a>
-          <a href="#contact" className="hover:text-cyan-400 transition">
+          </Link>
+          <Link to="/contact" className="hover:text-cyan-400 transition">
             Contact Us
-          </a>
+          </Link>
         </div>
 
         {/* Right Section - Buttons */}
@@ -76,20 +80,27 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="lg:hidden bg-[#1A1A1A] border-t border-gray-800 px-6 py-5 space-y-4">
-          <a
-            href="#home"
+          <Link
+            to="/"
             onClick={() => setIsMenuOpen(false)}
             className="block hover:text-cyan-400"
           >
             Home
-          </a>
-          <a
-            href="#about"
+          </Link>
+          <Link
+            to="/about"
             onClick={() => setIsMenuOpen(false)}
             className="block hover:text-cyan-400"
           >
             About
-          </a>
+          </Link>
+          <Link
+            to="/blog"
+            onClick={() => setIsMenuOpen(false)}
+            className="block hover:text-cyan-400"
+          >
+            Blog
+          </Link>
           <a
             href="#products"
             onClick={() => setIsMenuOpen(false)}
@@ -97,20 +108,20 @@ const Navbar = () => {
           >
             Our Products
           </a>
-          <a
-            href="#qualify"
+          <Link
+            to="/qualifying"
             onClick={() => setIsMenuOpen(false)}
             className="block hover:text-cyan-400"
           >
             Qualifying BW Customers
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="/contact"
             onClick={() => setIsMenuOpen(false)}
             className="block hover:text-cyan-400"
           >
             Contact Us
-          </a>
+          </Link>
 
           <div className="pt-4 border-t border-gray-700">
             <button className="w-full border border-cyan-400 text-white px-5 py-2 rounded text-sm hover:bg-[#1A1A1A] transition mb-3">

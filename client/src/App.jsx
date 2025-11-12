@@ -1,33 +1,21 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import QualifyingPage from "./pages/QualifyingPage";
+import ContactPage from "./pages/ContactPage";
+import BlogPage from "./pages/BlogPage";
 
 function App() {
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Fetch data from backend API
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(`${import.meta.env.VITE_API_URL}/`);
-        setMessage(response.data.message);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setMessage("Error connecting to backend");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 text-gray-800">
-      {/* Main Landing Page */}
-      <HomePage />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/qualifying" element={<QualifyingPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+      </Routes>
+    </Router>
   );
 }
 
