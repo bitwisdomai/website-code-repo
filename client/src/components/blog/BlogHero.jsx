@@ -1,5 +1,5 @@
 import React from "react";
-import about1Img from "../../assets/about1.jpg";
+import heroBackImg from "../../assets/HEROBACK.jpg";
 import ParticleNetwork from "../about/ParticleNetwork";
 import { FaStar } from "react-icons/fa";
 
@@ -9,11 +9,11 @@ const BlogHero = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${about1Img})` }}
+        style={{ backgroundImage: `url(${heroBackImg})` }}
       ></div>
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/90 to-black/95"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/85 to-black"></div>
 
       {/* Particle Network Animation */}
       <ParticleNetwork />
@@ -23,13 +23,13 @@ const BlogHero = () => {
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
 
       {/* Content */}
-      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-28 py-16 sm:py-20 md:py-24 lg:py-28 text-center">
-        <div className="flex items-center justify-center gap-2 mb-6">
-          <FaStar className="text-cyan-400 text-xl" />
-          <span className="text-cyan-400 text-sm font-semibold tracking-widest uppercase">Latest Updates</span>
+      <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-28 py-12 sm:py-16 md:py-20 lg:py-24 text-center">
+        <div className="flex items-center justify-center gap-2 mb-4 sm:mb-6">
+          <FaStar className="text-cyan-400 text-base sm:text-lg md:text-xl" />
+          <span className="text-cyan-400 text-xs sm:text-sm font-semibold tracking-widest uppercase">Latest Updates</span>
         </div>
         <h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 text-white px-2"
           style={{
             fontFamily: "'Orbitron', sans-serif",
             animation: "fadeInUp 1s ease-out"
@@ -38,7 +38,7 @@ const BlogHero = () => {
           Discover Our <span className="text-cyan-400">Insights</span>
         </h1>
         <p
-          className="text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+          className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-2"
           style={{
             animation: "fadeInUp 1s ease-out 0.3s both"
           }}

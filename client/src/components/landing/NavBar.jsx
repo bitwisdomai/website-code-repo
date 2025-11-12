@@ -1,25 +1,35 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  // Helper function to check if a link is active
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="relative bg-[#0E0E0E] text-white border-b border-gray-800">
+    <nav className="relative bg-[#0E0E0E] text-white border-b border-gray-800 overflow-visible">
       <div className="flex justify-between items-center px-6 md:px-16 lg:px-24 xl:px-32 py-4">
         {/* Left Section - Nav Links */}
         <div className="hidden lg:flex items-center space-x-10 text-[15px] font-medium tracking-tight">
           <Link
             to="/"
-            className="text-cyan-400 hover:text-cyan-300 transition"
+            className={`${isActive("/") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
           >
             Home
           </Link>
-          <Link to="/about" className="hover:text-cyan-400 transition">
+          <Link
+            to="/about"
+            className={`${isActive("/about") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+          >
             About
           </Link>
-          <Link to="/blog" className="hover:text-cyan-400 transition">
+          <Link
+            to="/blog"
+            className={`${isActive("/blog") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+          >
             Blog
           </Link>
 
@@ -29,7 +39,7 @@ const Navbar = () => {
               <span className="text-xs">▾</span>
             </button>
             {/* Dropdown Menu (optional) */}
-            <div className="absolute hidden group-hover:block bg-[#1A1A1A] border border-gray-700 rounded shadow-lg mt-2 min-w-[180px]">
+            <div className="absolute hidden group-hover:block bg-[#1A1A1A] border border-gray-700 rounded shadow-lg mt-2 min-w-[180px] z-[9999]">
               <a
                 href="#product1"
                 className="block px-4 py-2 text-sm hover:bg-gray-800 hover:text-cyan-400"
@@ -47,11 +57,14 @@ const Navbar = () => {
 
           <Link
             to="/qualifying"
-            className="hover:text-cyan-400 transition whitespace-nowrap"
+            className={`${isActive("/qualifying") ? "text-cyan-400" : "hover:text-cyan-400"} transition whitespace-nowrap`}
           >
             Qualifying BW Customers
           </Link>
-          <Link to="/contact" className="hover:text-cyan-400 transition">
+          <Link
+            to="/contact"
+            className={`${isActive("/contact") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+          >
             Contact Us
           </Link>
         </div>
@@ -83,21 +96,21 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={() => setIsMenuOpen(false)}
-            className="block hover:text-cyan-400"
+            className={`block ${isActive("/") ? "text-cyan-400" : "hover:text-cyan-400"}`}
           >
             Home
           </Link>
           <Link
             to="/about"
             onClick={() => setIsMenuOpen(false)}
-            className="block hover:text-cyan-400"
+            className={`block ${isActive("/about") ? "text-cyan-400" : "hover:text-cyan-400"}`}
           >
             About
           </Link>
           <Link
             to="/blog"
             onClick={() => setIsMenuOpen(false)}
-            className="block hover:text-cyan-400"
+            className={`block ${isActive("/blog") ? "text-cyan-400" : "hover:text-cyan-400"}`}
           >
             Blog
           </Link>
@@ -111,14 +124,14 @@ const Navbar = () => {
           <Link
             to="/qualifying"
             onClick={() => setIsMenuOpen(false)}
-            className="block hover:text-cyan-400"
+            className={`block ${isActive("/qualifying") ? "text-cyan-400" : "hover:text-cyan-400"}`}
           >
             Qualifying BW Customers
           </Link>
           <Link
             to="/contact"
             onClick={() => setIsMenuOpen(false)}
-            className="block hover:text-cyan-400"
+            className={`block ${isActive("/contact") ? "text-cyan-400" : "hover:text-cyan-400"}`}
           >
             Contact Us
           </Link>

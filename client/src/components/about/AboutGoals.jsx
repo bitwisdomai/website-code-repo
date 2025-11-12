@@ -48,13 +48,13 @@ const AboutGoals = () => {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <div
-            className="inline-flex items-center bg-cyan-400 text-black px-4 sm:px-5 md:px-6 py-2 rounded font-medium text-xs sm:text-sm mb-6"
+            className="inline-flex items-center bg-cyan-400 text-black px-3 sm:px-4 md:px-5 lg:px-6 py-1.5 sm:py-2 rounded font-medium text-[10px] sm:text-xs md:text-sm mb-4 sm:mb-5 md:mb-6"
             style={{ animation: "zoomIn 0.8s ease-out" }}
           >
             Our Mission
           </div>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-300 mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
             style={{
               fontFamily: "'Orbitron', sans-serif",
               animation: "fadeInUp 1s ease-out 0.2s both"
@@ -85,10 +85,10 @@ const AboutGoals = () => {
 
               {/* Content */}
               <div className="mt-4">
-                <h3 className="text-white text-lg sm:text-xl md:text-2xl font-semibold mb-3 group-hover:text-cyan-300 transition-colors duration-300">
+                <h3 className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 group-hover:text-cyan-300 transition-colors duration-300">
                   {goal.title}
                 </h3>
-                <p className="text-gray-400 text-sm sm:text-base leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                   {goal.description}
                 </p>
               </div>

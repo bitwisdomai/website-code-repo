@@ -73,29 +73,29 @@ const ContactFAQ = () => {
   };
 
   return (
-    <section className="relative bg-black text-white py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-8 overflow-hidden">
+    <section className="relative bg-black text-white py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 overflow-hidden">
       {/* Particle Network Animation */}
       <ParticleNetwork />
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-3 mb-4">
-            <FaQuestionCircle className="text-cyan-400 text-3xl sm:text-4xl" />
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4 px-2">
+            <FaQuestionCircle className="text-cyan-400 text-2xl sm:text-3xl md:text-4xl flex-shrink-0" />
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-300"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-300 text-center sm:text-left"
               style={{ fontFamily: "'Orbitron', sans-serif" }}
             >
               Frequently Asked Questions
             </h2>
           </div>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Find answers to common questions about BitWisdom AI Network
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
@@ -109,18 +109,18 @@ const ContactFAQ = () => {
                 {/* Question Button */}
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-start justify-between gap-4 p-5 sm:p-6 text-left hover:bg-cyan-400/5 transition-all duration-300"
+                  className="w-full flex items-start justify-between gap-3 sm:gap-4 p-4 sm:p-5 md:p-6 text-left hover:bg-cyan-400/5 transition-all duration-300"
                 >
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="inline-block bg-cyan-400/10 border border-cyan-400/30 rounded px-2 py-1 text-xs font-semibold text-cyan-400 mb-2">
                       {faq.category}
                     </div>
-                    <h3 className="text-white text-base sm:text-lg font-medium leading-relaxed">
+                    <h3 className="text-white text-sm sm:text-base md:text-lg font-medium leading-relaxed pr-2">
                       {faq.question}
                     </h3>
                   </div>
                   <FaChevronDown
-                    className={`flex-shrink-0 text-cyan-400 text-xl transition-transform duration-300 mt-1 ${
+                    className={`flex-shrink-0 text-cyan-400 text-base sm:text-lg md:text-xl transition-transform duration-300 mt-1 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -132,11 +132,11 @@ const ContactFAQ = () => {
                     isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-5 sm:px-6 pb-5 sm:pb-6 border-t border-cyan-400/20">
-                    <p className="text-gray-400 text-sm sm:text-base leading-relaxed mt-4">
+                  <div className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 border-t border-cyan-400/20">
+                    <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed mt-3 sm:mt-4">
                       This question will be answered in detail. Please contact us directly for comprehensive information about this topic, or schedule a consultation with our team to discuss your specific needs.
                     </p>
-                    <button className="mt-4 text-cyan-400 text-sm font-semibold hover:text-cyan-300 transition-colors duration-300 flex items-center gap-2">
+                    <button className="mt-3 sm:mt-4 text-cyan-400 text-xs sm:text-sm font-semibold hover:text-cyan-300 transition-colors duration-300 flex items-center gap-2">
                       Contact us for more details
                       <span>→</span>
                     </button>
@@ -148,14 +148,14 @@ const ContactFAQ = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center bg-gradient-to-r from-cyan-400/10 to-transparent border border-cyan-400/30 rounded-xl p-6 sm:p-8">
-          <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+        <div className="mt-8 sm:mt-10 md:mt-12 text-center bg-gradient-to-r from-cyan-400/10 to-transparent border border-cyan-400/30 rounded-xl p-5 sm:p-6 md:p-8">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3">
             Still have questions?
           </h3>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-400 text-sm sm:text-base mb-4 sm:mb-5 md:mb-6 px-2">
             Can't find the answer you're looking for? Please get in touch with our team.
           </p>
-          <button className="bg-cyan-400 text-black px-8 py-3 rounded-lg text-base font-semibold hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,191,255,0.6)] hover:scale-105 active:scale-95">
+          <button className="bg-cyan-400 text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,191,255,0.6)] hover:scale-105 active:scale-95 w-full sm:w-auto">
             Contact Support
           </button>
         </div>

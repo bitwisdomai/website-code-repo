@@ -30,7 +30,7 @@ const ContactInfo = () => {
   ];
 
   return (
-    <section className="relative bg-[#0E0E0E] text-white py-16 sm:py-20 md:py-24 px-4 sm:px-8 overflow-hidden">
+    <section className="relative bg-[#0E0E0E] text-white py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-400 rounded-full blur-3xl"></div>
@@ -38,39 +38,39 @@ const ContactInfo = () => {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-300 mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
             Other Ways to Reach Us
           </h2>
-          <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Connect with us through any of these channels
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
           {contactDetails.map((detail, index) => {
             const Icon = detail.icon;
             return (
               <div
                 key={index}
-                className="group bg-black/50 border border-cyan-400/30 rounded-xl p-6 text-center hover:border-cyan-400 transition-all duration-500 hover:shadow-[0_0_25px_rgba(0,191,255,0.2)] hover:-translate-y-2"
+                className="group bg-black/50 border border-cyan-400/30 rounded-xl p-4 sm:p-5 md:p-6 text-center hover:border-cyan-400 transition-all duration-500 hover:shadow-[0_0_25px_rgba(0,191,255,0.2)] hover:-translate-y-2"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
                 }}
               >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center group-hover:bg-cyan-400/30 transition-all duration-300">
-                    <Icon className="text-cyan-400 text-2xl" />
+                <div className="flex justify-center mb-3 sm:mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-cyan-400/20 rounded-full flex items-center justify-center group-hover:bg-cyan-400/30 transition-all duration-300">
+                    <Icon className="text-cyan-400 text-xl sm:text-2xl" />
                   </div>
                 </div>
-                <h3 className="text-white text-lg font-semibold mb-2 group-hover:text-cyan-300 transition-colors duration-300">
+                <h3 className="text-white text-base sm:text-lg font-semibold mb-2 group-hover:text-cyan-300 transition-colors duration-300">
                   {detail.title}
                 </h3>
-                <p className="text-cyan-400 font-medium mb-1">{detail.content}</p>
-                <p className="text-gray-500 text-sm">{detail.subContent}</p>
+                <p className="text-cyan-400 font-medium mb-1 text-sm sm:text-base">{detail.content}</p>
+                <p className="text-gray-500 text-xs sm:text-sm">{detail.subContent}</p>
               </div>
             );
           })}

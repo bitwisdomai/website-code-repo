@@ -33,14 +33,14 @@ const AboutValues = () => {
           style={{ animation: "fadeInDown 1s ease-out" }}
         >
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-300 mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
             What We Stand For
           </h2>
-          <div className="w-20 h-1 bg-cyan-400 mx-auto mb-4" style={{ animation: "scaleX 1s ease-out 0.3s both" }}></div>
+          <div className="w-20 h-1 bg-cyan-400 mx-auto mb-3 sm:mb-4" style={{ animation: "scaleX 1s ease-out 0.3s both" }}></div>
           <p
-            className="text-gray-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto"
+            className="text-xs sm:text-sm md:text-base lg:text-lg max-w-3xl mx-auto px-2"
             style={{ animation: "fadeIn 1s ease-out 0.5s both" }}
           >
             At BitWisdom AI Network, we are passionate advocates for:

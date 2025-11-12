@@ -4,7 +4,7 @@ import ParticleNetwork from "../about/ParticleNetwork";
 
 const QualifyingClosing = () => {
   return (
-    <section className="relative bg-[#0E0E0E] text-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-8 md:px-16 lg:px-28 overflow-hidden">
+    <section className="relative bg-[#0E0E0E] text-white py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8 overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
@@ -17,7 +17,7 @@ const QualifyingClosing = () => {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Main Content Card */}
         <div
-          className="bg-black/50 border border-cyan-400/40 rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 hover:border-cyan-400 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,191,255,0.2)]"
+          className="bg-black/50 border border-cyan-400/40 rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 lg:p-10 hover:border-cyan-400 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,191,255,0.2)]"
           style={{ animation: "slideInUp 1s ease-out" }}
         >
           <div className="flex items-start gap-4 mb-6">
