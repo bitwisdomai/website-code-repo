@@ -18,15 +18,13 @@ const CryptoPaymentsSection = () => {
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
         {/* Left Content */}
         <div className="z-10 space-y-4 sm:space-y-5 md:space-y-6">
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight"
-            style={{
-              fontFamily: "'Orbitron', sans-serif",
-              color: "#A5F3FC",
-              textShadow: "0px 0px 10px #38BDF8",
-            }}
-          >
-            Accept and Optimize <br /> Crypto Payments
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+            <div className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+              Accept and Optimize
+            </div>
+            <div className="bg-gradient-to-b from-white to-[#00f0ff] bg-clip-text text-transparent">
+              Crypto Payments
+            </div>
           </h2>
 
           <p className="text-gray-300 text-xs sm:text-sm md:text-base max-w-lg">

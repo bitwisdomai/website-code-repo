@@ -8,6 +8,7 @@ import PaymentTransition from "../components/landing/PaymentTransition";
 import CryptoPaymentsSection from "../components/landing/CryptoPaymentsSection";
 import BitWisdom from "../components/landing/BitWisdom";
 import CryptoNodeSection from "../components/landing/CryptoNodeSection";
+import MobileNodeSection from "../components/landing/MobileNodeSection";
 import ContactForm from "../components/landing/ContactForm";
 import NavBar from "../components/landing/NavBar";
 const HomePage = () => {
@@ -20,9 +21,10 @@ const HomePage = () => {
       <FeaturesSection />
       <ProfitCalculator />
       <PaymentTransition />
-      <CryptoPaymentsSection />
+      {/* <CryptoPaymentsSection /> */}
       <BitWisdom />
       <CryptoNodeSection />
+      <MobileNodeSection />
       <ContactForm />
       <Footer />
     </div>

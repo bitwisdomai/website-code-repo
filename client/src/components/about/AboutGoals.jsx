@@ -54,13 +54,14 @@ const AboutGoals = () => {
             Our Mission
           </div>
           <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 px-2"
             style={{
-              fontFamily: "'Orbitron', sans-serif",
               animation: "fadeInUp 1s ease-out 0.2s both"
             }}
           >
-            BitWisdom AI Network Internal Goals
+            <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+              BitWisdom AI Network Internal Goals
+            </span>
           </h2>
           <div
             className="w-20 h-1 bg-cyan-400 mx-auto"

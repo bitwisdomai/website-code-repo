@@ -77,11 +77,9 @@ const QualifyingCustomers = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20">
-          <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: "'Orbitron', sans-serif" }}
-          >
-            Who <span className="text-cyan-400">Qualifies?</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <span className="text-white">Who </span>
+            <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">Qualifies?</span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
             Discover if your organization is eligible to join our network

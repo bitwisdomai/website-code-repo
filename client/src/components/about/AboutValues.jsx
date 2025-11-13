@@ -32,11 +32,10 @@ const AboutValues = () => {
           className="text-center mb-8 sm:mb-12 md:mb-16"
           style={{ animation: "fadeInDown 1s ease-out" }}
         >
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
-            style={{ fontFamily: "'Orbitron', sans-serif" }}
-          >
-            What We Stand For
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 px-2">
+            <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+              What We Stand For
+            </span>
           </h2>
           <div className="w-20 h-1 bg-cyan-400 mx-auto mb-3 sm:mb-4" style={{ animation: "scaleX 1s ease-out 0.3s both" }}></div>
           <p

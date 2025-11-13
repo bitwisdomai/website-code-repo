@@ -39,11 +39,10 @@ const ContactInfo = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
-            style={{ fontFamily: "'Orbitron', sans-serif" }}
-          >
-            Other Ways to Reach Us
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 px-2">
+            <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+              Other Ways to Reach Us
+            </span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Connect with us through any of these channels

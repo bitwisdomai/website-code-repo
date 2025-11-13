@@ -78,8 +78,9 @@ const BlogGrid = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header with Filter */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-            All Blog <span className="text-cyan-400">Posts</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+            <span className="text-white">All Blog </span>
+            <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">Posts</span>
           </h2>
 
           <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">

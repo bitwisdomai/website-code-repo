@@ -23,11 +23,10 @@ const AboutTeam = () => {
           className="text-center mb-8 sm:mb-12 md:mb-16"
           style={{ animation: "fadeIn 1s ease-out" }}
         >
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-cyan-300 mb-3 sm:mb-4 px-2"
-            style={{ fontFamily: "'Orbitron', sans-serif" }}
-          >
-            Our Team
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 px-2">
+            <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+              Our Team
+            </span>
           </h2>
           <div className="w-20 h-1 bg-cyan-400 mx-auto" style={{ animation: "expandWidth 1s ease-out 0.3s both" }}></div>
         </div>

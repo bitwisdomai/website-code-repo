@@ -29,13 +29,13 @@ const BlogHero = () => {
           <span className="text-cyan-400 text-xs sm:text-sm font-semibold tracking-widest uppercase">Latest Updates</span>
         </div>
         <h1
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 text-white px-2"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 px-2"
           style={{
-            fontFamily: "'Orbitron', sans-serif",
             animation: "fadeInUp 1s ease-out"
           }}
         >
-          Discover Our <span className="text-cyan-400">Insights</span>
+          <span className="text-white">Discover Our </span>
+          <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">Insights</span>
         </h1>
         <p
           className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-2"
