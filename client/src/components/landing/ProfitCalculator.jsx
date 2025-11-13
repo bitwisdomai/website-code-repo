@@ -57,17 +57,21 @@ const ProfitCalculator = () => {
       }}
     >
       {/* Heading Section */}
-      <div className="text-center mb-10">
+      <div className="text-left mb-10">
         <h1
           className="text-3xl md:text-4xl font-bold mb-3"
-          style={{
-            fontFamily: "'Orbitron', sans-serif",
-            color: "#A5F3FC",
-            textShadow: "0px 0px 12px #38BDF8",
-          }}
+          // style={{
+          //   fontFamily: "'Orbitron', sans-serif",
+          //   color: "#A5F3FC",
+          //   textShadow: "0px 0px 12px #38BDF8",
+          // }}
         >
-          Total Profit Estimator – Running A Crypto Node On The Bitwisdom AI
-          Network
+          <div className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+            Total Profit Estimator – Running A Crypto
+          </div>
+          <div className="bg-gradient-to-b from-white to-[#00f0ff] bg-clip-text text-transparent">
+            Node On The Bitwisdom AI Network
+          </div>
         </h1>
         <p className="text-sky-200 text-sm md:text-base">
           There will be one input and two outputs of monthly and annual profit.
