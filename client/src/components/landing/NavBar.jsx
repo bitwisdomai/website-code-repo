@@ -11,24 +11,30 @@ const Navbar = () => {
 
   return (
     <nav className="relative bg-[#0E0E0E] text-white border-b border-gray-800 overflow-visible">
-      <div className="flex justify-between items-center px-6 md:px-16 lg:px-24 xl:px-32 py-4">
-        {/* Left Section - Nav Links */}
-        <div className="hidden lg:flex items-center space-x-10 text-[15px] font-medium tracking-tight">
+      <div className="flex w-full items-center justify-center px-6 md:px-16 lg:px-24 xl:px-32 py-4">
+        {/* Centered Nav Links with Equal Spacing */}
+        <div className="hidden lg:flex items-center justify-center gap-20 text-[15px] font-medium tracking-tight flex-1">
           <Link
             to="/"
-            className={`${isActive("/") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+            className={`${
+              isActive("/") ? "text-cyan-400" : "hover:text-cyan-400"
+            } transition`}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className={`${isActive("/about") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+            className={`${
+              isActive("/about") ? "text-cyan-400" : "hover:text-cyan-400"
+            } transition`}
           >
             About
           </Link>
           <Link
             to="/blog"
-            className={`${isActive("/blog") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+            className={`${
+              isActive("/blog") ? "text-cyan-400" : "hover:text-cyan-400"
+            } transition`}
           >
             Blog
           </Link>
@@ -57,26 +63,30 @@ const Navbar = () => {
 
           <Link
             to="/qualifying"
-            className={`${isActive("/qualifying") ? "text-cyan-400" : "hover:text-cyan-400"} transition whitespace-nowrap`}
+            className={`${
+              isActive("/qualifying") ? "text-cyan-400" : "hover:text-cyan-400"
+            } transition whitespace-nowrap`}
           >
             Qualifying BW Customers
           </Link>
           <Link
             to="/contact"
-            className={`${isActive("/contact") ? "text-cyan-400" : "hover:text-cyan-400"} transition`}
+            className={`${
+              isActive("/contact") ? "text-cyan-400" : "hover:text-cyan-400"
+            } transition`}
           >
             Contact Us
           </Link>
-        </div>
 
-        {/* Right Section - Buttons */}
-        <div className="hidden lg:flex items-center gap-4">
-          <button className="border border-cyan-400 text-white px-5 py-2 rounded text-sm font-medium hover:bg-[#1A1A1A] transition">
-            Product Waitlist
-          </button>
-          <button className="bg-cyan-400 text-black px-5 py-2 rounded text-sm font-semibold hover:bg-cyan-300 transition">
-            Join Our Network
-          </button>
+          {/* Grouped Buttons */}
+          <div className="flex items-center gap-4">
+            <button className="border border-cyan-400 text-white px-5 py-2 rounded text-sm font-medium hover:bg-[#1A1A1A] transition">
+              Product Waitlist
+            </button>
+            <button className="bg-cyan-400 text-black px-5 py-2 rounded text-sm font-semibold hover:bg-cyan-300 transition">
+              Join Our Network
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,21 +106,27 @@ const Navbar = () => {
           <Link
             to="/"
             onClick={() => setIsMenuOpen(false)}
-            className={`block ${isActive("/") ? "text-cyan-400" : "hover:text-cyan-400"}`}
+            className={`block ${
+              isActive("/") ? "text-cyan-400" : "hover:text-cyan-400"
+            }`}
           >
             Home
           </Link>
           <Link
             to="/about"
             onClick={() => setIsMenuOpen(false)}
-            className={`block ${isActive("/about") ? "text-cyan-400" : "hover:text-cyan-400"}`}
+            className={`block ${
+              isActive("/about") ? "text-cyan-400" : "hover:text-cyan-400"
+            }`}
           >
             About
           </Link>
           <Link
             to="/blog"
             onClick={() => setIsMenuOpen(false)}
-            className={`block ${isActive("/blog") ? "text-cyan-400" : "hover:text-cyan-400"}`}
+            className={`block ${
+              isActive("/blog") ? "text-cyan-400" : "hover:text-cyan-400"
+            }`}
           >
             Blog
           </Link>
@@ -124,14 +140,18 @@ const Navbar = () => {
           <Link
             to="/qualifying"
             onClick={() => setIsMenuOpen(false)}
-            className={`block ${isActive("/qualifying") ? "text-cyan-400" : "hover:text-cyan-400"}`}
+            className={`block ${
+              isActive("/qualifying") ? "text-cyan-400" : "hover:text-cyan-400"
+            }`}
           >
             Qualifying BW Customers
           </Link>
           <Link
             to="/contact"
             onClick={() => setIsMenuOpen(false)}
-            className={`block ${isActive("/contact") ? "text-cyan-400" : "hover:text-cyan-400"}`}
+            className={`block ${
+              isActive("/contact") ? "text-cyan-400" : "hover:text-cyan-400"
+            }`}
           >
             Contact Us
           </Link>

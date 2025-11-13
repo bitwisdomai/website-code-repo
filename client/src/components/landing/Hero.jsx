@@ -45,12 +45,18 @@ const Hero = () => {
 
         {/* Left Content */}
         <div className="relative z-10 max-w-full md:max-w-2xl w-full">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight">
+          <h1 className="text-xl sm:text-sm md:text-md lg:text-2xl font-bold mb-3 sm:mb-4 leading-tight bg-gradient-to-b from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             "Bitwisdom AI Network TM"
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 sm:mb-8 md:mb-10 italic">
-            Featuring AI Technology - <br />A Game Changer for Humanity
-          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 sm:mb-8 md:mb-10 italic">
+            <div className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
+              Featuring AI Technology -{" "}
+            </div>
+            <div className="text-white">A Game Changer for </div>
+            <div className="bg-gradient-to-b from-white to-[#00f0ff] bg-clip-text text-transparent">
+              Humanity
+            </div>
+          </h2>
 
           {/* Carousel Text + Dots */}
           <div className="flex flex-col items-start gap-4 sm:gap-6 mb-6 sm:mb-8 md:mb-10">
