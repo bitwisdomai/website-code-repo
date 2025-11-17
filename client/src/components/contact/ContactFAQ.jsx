@@ -7,79 +7,109 @@ const ContactFAQ = () => {
 
   const faqs = [
     {
-      question: "How do consumers pay merchants with crypto and how private and secure are the transactions?",
-      answer: "Consumers pay by scanning a wallet QR code; the transaction is recorded on the blockchain. Privacy depends on the blockchain used—Bitcoin and Lightning offer pseudonymity, not full anonymity.",
-      category: "Security & Privacy"
+      question:
+        "How do consumers pay merchants with crypto and how private and secure are the transactions?",
+      answer:
+        "When consumers are ready to checkout in-person with total goods/services/taxes calculated, merchant enters amount in a mobile crypto POS terminal app. The consumer scans the uniquely-generated QR-code with their mobile crypto wallet, or taps to pay after they verify the amount at Point of Sale. Merchant and consumer are notified in ~0.1 second settlement. E-commerce transactions are similar but the consumer can use either mobile, hardware and computer wallet types to pay for goods or services. Securely-encrypted Bitcoin transactions are virtually as private as cash transactions and using our system, this information is never shared with other businesses – ever.",
+      category: "Security & Privacy",
     },
     {
-      question: "What is and why run a crypto node, how difficult is it to run, including updating, what is the incentive and what are the costs involved?",
-      answer: "A crypto node validates and relays transactions, supporting network integrity. It's not difficult with automated software; costs involve electricity, uptime, and hardware, with rewards or fees as incentives.",
-      category: "Crypto Nodes"
+      question:
+        "What is and why run a crypto node, how difficult is it to run, including updating, what is the incentive and what are the costs involved?",
+      answer:
+        "We define a crypto node as an automated cryptocurrency transactional facilitation server. For the first time ever, we’ve created an every-transaction-residual, financial incentive for Qualifying BW Customers to facilitate super-fast, lightning crypto transactions for their merchants. Leave the initial setup to us. We strive to make it as uncomplicated as possible for you to run a crypto node, onboard merchants, allowing your merchants to provide a simple merchant-consumer experience. We even offer a maintenance package for updates. Relatively modest startup costs include domain name purchase, equipment and various web service subscriptions plus funding of lightning channels. Build your business a Bitcoin Strategic Reserve!",
+      category: "Crypto Nodes",
     },
     {
-      question: "What is a mobile phone crypto node and a laptop crypto node and what supported crypto node options exist?",
-      answer: "A mobile or laptop node is a lightweight version that connects to the network but doesn't store full blockchain data. BW supports full, pruned, and lightweight nodes depending on device capacity.",
-      category: "Crypto Nodes"
+      question:
+        "What is a mobile phone crypto node and a laptop crypto node and what supported crypto node options exist?",
+      answer:
+        "nodeFÔNTM (patent-pending) is our mobile phone crypto node that facilitates transactions similarly to our powerful-spec’d business-class notebook node and both run our customized software. You can run your node of choice ranging in compute power from a Raspberry Pi to an obscenely powerful workstation/server (rack-mount or tower) or cloud-based (VPS not recommended due to service dependency), however our two offerings are power-sipping options. All of the above support our AI-powered tech (patent-pending).",
+      category: "Crypto Nodes",
     },
     {
-      question: "How much profit can be made running a crypto node in the BW Network and what's the commitment policy?",
-      answer: "Profit depends on node uptime, transaction volume, and network usage. BW has no fixed return or lock-in period; earnings vary with network activity and fees collected.",
-      category: "Profitability"
+      question:
+        "How much profit can be made running a crypto node in the BW Network and what's the commitment policy?",
+      answer:
+        "It depends on how many merchants are onboarded with the Qualifying BW Customer and the total transactional volume of those merchants less your operational expenses. You’ll see the sky’s the limit when you try out our TPE (Total Profit Estimator) and the beauty is there’s no commitment – ever.",
+      category: "Profitability",
     },
     {
-      question: "Is BW competitive to traditional crypto payment gateway services and why would merchants prefer our system?",
-      answer: "BW removes intermediaries and settles directly on-chain or via Lightning. Merchants avoid high gateway fees and delays but assume responsibility for managing their own wallets and conversions.",
-      category: "Competitive Advantage"
+      question:
+        "Is BW competitive to traditional crypto payment gateway services and why would merchants prefer our system?",
+      answer:
+        "You as the customer have multiple options, however, compare our total merchant processing fees, privacy, features and full support for POS transactions. You, the customer already established relationships and earned your merchant’s trust and in turn, our hopes are you will be able to offer this unique value-added service. Why give revenue to crypto payment gateway providers with complicated merchant setup requirements when the profit can be yours!",
+      category: "Competitive Advantage",
     },
     {
-      question: "What are the benefits and how quick is the settlement time for a merchant/customer transaction on the Lightning network?",
-      answer: "Lightning Network transactions settle within seconds. It enables instant, low-fee micropayments with finality once confirmed.",
-      category: "Transactions"
+      question:
+        "What are the benefits and how quick is the settlement time for a merchant/customer transaction on the Lightning network?",
+      answer:
+        "Base-layer blockchain Bitcoin transactions are slow at 3.3 to 7 transactions-per-second (TPS) worldwide and cost between around 0.50% and 31.00%, while Bitcoin transactions on the Lightning network are millions of transactions-per-second and cost typically less than .01%. Initial merchant/customer settlement via Lightning on our system is ~0.1 seconds. We need coffee now!",
+      category: "Transactions",
     },
     {
-      question: "If traditional merchant transaction processing settlement takes 30+ days, what is the final settlement time and fairness level for all merchants on BW's system?",
-      answer: "Settlement on BW is immediate once the blockchain confirms payment. All merchants receive funds directly without intermediaries, so fairness depends on network rules, not a central authority.",
-      category: "Settlement"
+      question:
+        "If traditional merchant transaction processing settlement takes 30+ days, what is the final settlement time and fairness level for all merchants on BW's system?",
+      answer:
+        "Your merchants can expect their wallet final settlement between 1 minute and 9 days, depending on amount thresholds met and network traffic. Merchant higher transactional volumes are prioritized over lower ones; however lower amounts are bumped to the front of the line if their time threshold is running out. The aim is fairness for all.",
+      category: "Settlement",
     },
     {
-      question: "What cryptocurrencies does BW support now and what will be supported in the near future?",
-      answer: "BW currently supports Bitcoin and Lightning-based payments. Future integrations will depend on node compatibility, network stability, and regulatory compliance.",
-      category: "Cryptocurrencies"
+      question:
+        "What cryptocurrencies does BW support now and what will be supported in the near future?",
+      answer:
+        "Bitcoin and Lightning Bitcoin transactions are supported currently and when USDt Tether moves to the Lightning network, support on our system is planned to shortly follow.",
+      category: "Cryptocurrencies",
     },
     {
-      question: "Why does this system only support final transaction settlement to the merchant's wallet versus to currency?",
-      answer: "Because BW operates as a decentralized payment protocol, not a fiat exchange. It transfers crypto directly to the merchant's wallet, avoiding custodial and regulatory obligations.",
-      category: "Settlement"
+      question:
+        "Why does this system only support final transaction settlement to the merchant's wallet versus to currency?",
+      answer:
+        "We are fans of fund self-sovereignty, privacy and security that a crypto wallet can provide over currency. Certain hot wallets supported on our system have support for easily converting to currency.",
+      category: "Settlement",
     },
     {
-      question: "How many merchant stores can be set up on one node and how many crypto nodes can a business run?",
-      answer: "Multiple stores can operate under one node, limited by hardware and bandwidth. Businesses can run multiple nodes if they want to distribute load or operate in different locations.",
-      category: "Scalability"
+      question:
+        "How many merchant stores can be set up on one node and how many crypto nodes can a business run?",
+      answer:
+        "Short answer – unlimited, however, we recommend no more than 200 merchants per node, but that also depends on the transactional volume of each merchant. Qualifying BW Customers can run as many nodes as desired.",
+      category: "Scalability",
     },
     {
-      question: "Does BW perform KYC on Qualifying BW Customers and who's responsible for KYC with onboarded merchants?",
-      answer: "BW performs KYC where legally required, primarily for network-level participants. Merchants remain responsible for customer KYC or AML compliance within their jurisdictions.",
-      category: "Compliance"
+      question:
+        "Does BW perform KYC on Qualifying BW Customers and who's responsible for KYC with onboarded merchants?",
+      answer:
+        "We perform KYC on our Qualifying BW Customers. Information can include verifying the identity of our customers, understanding the nature of their business relationships, and conducting ongoing monitoring of transactions. This also often involves collecting documents such as identification, proof of address, and information about beneficial owners for compliance with anti-money-laundering regulations. With our system it is your responsibility to perform KYC on your onboarded merchants.",
+      category: "Compliance",
     },
     {
-      question: "What accounting/metrics are provided and does BW's system have support for merchant's proprietary POS terminal integration?",
-      answer: "BW provides transaction logs, balance summaries, and node performance metrics. POS integration is supported through APIs and plugin modules, depending on merchant system compatibility.",
-      category: "Integration"
+      question:
+        "What accounting/metrics are provided and does BW's system have support for merchant's proprietary POS terminal integration?",
+      answer:
+        "In full transparency, merchants will see their transactions, know their monthly total crypto received and their average merchant processing fees, represented as a percentage. Popular proprietary POS terminal integration is planned for end of second quarter of 2026.",
+      category: "Integration",
     },
     {
-      question: "What are the advantages of running on-premises, a powerful workstation/server for the decentralized AI Module and what happens if the crypto nodes cannot reach it?",
-      answer: "Running on-premises provides faster processing, full data control, and independence from cloud reliance. If unreachable, nodes continue operating with limited functionality until reconnected.",
-      category: "Infrastructure"
+      question:
+        "What are the advantages of running on-premises, a powerful workstation/server for the decentralized AI Module and what happens if the crypto nodes cannot reach it?",
+      answer:
+        "Running your own AI system server gives your node(s) high availability to the AI system and allows you to take full advantage of our Self-Healing Node Technology, simultaneously enhancing the decentralized AI systems’s lowest fee effectiveness, while increasing the redundancy of our entire worldwide network of cooperative crypto nodes. We’ve modeled our system after the infrastructure of the Bitcoin blockchain.",
+      category: "Infrastructure",
     },
     {
-      question: "Why did BW include AI and automation in its 12 patent-pending technologies and business model?",
-      answer: "AI and automation handle dynamic network optimization, predictive analytics, and fraud detection. They reduce manual management and improve system efficiency.",
-      category: "Technology"
+      question:
+        "Why did BW include AI and automation in its 12 patent-pending technologies and business model?",
+      answer:
+        "The speed of business demands automation and we are embracing today’s technology. The use of AI to allow all nodes to work in a cooperative way to settle crypto transactions at the lowest fees possible allows our system to scale. All nodes on our system already have a fallback position function to settle fees at a low fee if the AI system is not reachable and this provides for redundancy.",
+      category: "Technology",
     },
     {
-      question: "Why would someone 'Help Fund Developing Country Businesses' and who does this really help?",
-      answer: "It channels crypto liquidity into real businesses that lack traditional financing. The funding supports local economic growth while giving contributors measurable social and financial impact.",
-      category: "Social Impact"
+      question:
+        "Why would someone 'Help Fund Developing Country Businesses' and who does this really help?",
+      answer:
+        "We welcome generosity from Bitcoiners wanting to expand worldwide adoption of Bitcoin. This crowdfunding campaign is kept separately and goes directly to developing country businesses’ initial setup costs.",
+      category: "Social Impact",
     },
   ];
 
@@ -117,7 +147,7 @@ const ContactFAQ = () => {
                 key={index}
                 className="bg-[#0E0E0E] border border-cyan-400/30 rounded-lg overflow-hidden hover:border-cyan-400/50 transition-all duration-300"
                 style={{
-                  animation: `fadeInUp 0.5s ease-out ${index * 0.05}s both`
+                  animation: `fadeInUp 0.5s ease-out ${index * 0.05}s both`,
                 }}
               >
                 {/* Question Button */}
@@ -163,7 +193,8 @@ const ContactFAQ = () => {
             Still have questions?
           </h3>
           <p className="text-gray-400 text-sm sm:text-base mb-4 sm:mb-5 md:mb-6 px-2">
-            Can't find the answer you're looking for? Please get in touch with our team.
+            Can't find the answer you're looking for? Please get in touch with
+            our team.
           </p>
           <button className="bg-cyan-400 text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-cyan-300 transition-all duration-300 shadow-lg hover:shadow-[0_0_25px_rgba(0,191,255,0.6)] hover:scale-105 active:scale-95 w-full sm:w-auto">
             Contact Support

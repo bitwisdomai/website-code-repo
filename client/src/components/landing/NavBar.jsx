@@ -39,27 +39,14 @@ const Navbar = () => {
             Blog
           </Link>
 
-          <div className="relative group">
-            <button className="hover:text-cyan-400 transition flex items-center gap-1">
-              Our Products
-              <span className="text-xs">▾</span>
-            </button>
-            {/* Dropdown Menu (optional) */}
-            <div className="absolute hidden group-hover:block bg-[#1A1A1A] border border-gray-700 rounded shadow-lg mt-2 min-w-[180px] z-[9999]">
-              <a
-                href="#product1"
-                className="block px-4 py-2 text-sm hover:bg-gray-800 hover:text-cyan-400"
-              >
-                Product 1
-              </a>
-              <a
-                href="#product2"
-                className="block px-4 py-2 text-sm hover:bg-gray-800 hover:text-cyan-400"
-              >
-                Product 2
-              </a>
-            </div>
-          </div>
+          <Link
+            to="/products"
+            className={`${
+              isActive("/products") ? "text-cyan-400" : "hover:text-cyan-400"
+            } transition`}
+          >
+            Our Products
+          </Link>
 
           <Link
             to="/qualifying"
@@ -130,13 +117,15 @@ const Navbar = () => {
           >
             Blog
           </Link>
-          <a
-            href="#products"
+          <Link
+            to="/products"
             onClick={() => setIsMenuOpen(false)}
-            className="block hover:text-cyan-400"
+            className={`block ${
+              isActive("/products") ? "text-cyan-400" : "hover:text-cyan-400"
+            }`}
           >
             Our Products
-          </a>
+          </Link>
           <Link
             to="/qualifying"
             onClick={() => setIsMenuOpen(false)}

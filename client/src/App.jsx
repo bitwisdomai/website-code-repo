@@ -4,6 +4,7 @@ import AboutPage from "./pages/AboutPage";
 import QualifyingPage from "./pages/QualifyingPage";
 import ContactPage from "./pages/ContactPage";
 import BlogPage from "./pages/BlogPage";
+import ProductsPage from "./pages/ProductsPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/qualifying" element={<QualifyingPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogPage />} />
+        <Route path="/products" element={<ProductsPage />} />
       </Routes>
     </Router>
   );
