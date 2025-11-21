@@ -1,6 +1,6 @@
 import React, { useEffect, lazy, Suspense } from "react";
 import Banner from "../components/landing/Banner";
-import NewHero from "../components/landing/NewHero";
+import Hero from "../components/landing/Hero";
 import NavBar from "../components/landing/NavBar";
 import Footer from "../components/landing/Footer";
 
@@ -32,7 +32,7 @@ const HomePage = () => {
       {/* Above-the-fold - Load immediately */}
       <Banner />
       <NavBar />
-      <NewHero />
+      <Hero />
 
       {/* Below-the-fold - Lazy loaded with Suspense */}
       <Suspense fallback={<div className="min-h-[200px] bg-black" />}>

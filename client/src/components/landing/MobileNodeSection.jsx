@@ -50,16 +50,16 @@ const MobileNodeSection = () => {
         // Dot with glow
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 240, 255, 0.8)';
+        ctx.fillStyle = "rgba(0, 240, 255, 0.8)";
         ctx.shadowBlur = 8;
-        ctx.shadowColor = 'rgba(0, 240, 255, 0.6)';
+        ctx.shadowColor = "rgba(0, 240, 255, 0.6)";
         ctx.fill();
         ctx.shadowBlur = 0;
 
         // Inner bright center
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius * 0.5, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+        ctx.fillStyle = "rgba(255, 255, 255, 0.9)";
         ctx.fill();
       }
     }
@@ -128,7 +128,10 @@ const MobileNodeSection = () => {
         }
       `}</style>
 
-      <section id="mobile-node-section" className="relative bg-gradient-to-br from-black via-[#0a0a0a] to-[#0d1117] text-white py-14 sm:py-16 md:py-20 lg:py-24 px-6 lg:px-12 overflow-hidden">
+      <section
+        id="mobile-node-section"
+        className="relative bg-gradient-to-br from-black via-[#0a0a0a] to-[#0d1117] text-white py-14 sm:py-16 md:py-20 lg:py-24 px-6 lg:px-12 overflow-hidden"
+      >
         {/* Canvas Background Animation */}
         <canvas
           ref={canvasRef}
@@ -137,7 +140,10 @@ const MobileNodeSection = () => {
 
         {/* Enhanced Background Glow Effects */}
         <div className="absolute top-10 left-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div
+          className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[150px]"></div>
 
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -188,7 +194,8 @@ const MobileNodeSection = () => {
                 transaction loads.
               </li>
               <li>
-                A node in your pocket can fundamentally reshape global commerce.
+                A node in such a small package can fundamentally reshape global
+                commerce.
               </li>
             </ul>
 
@@ -225,8 +232,8 @@ const MobileNodeSection = () => {
                       capable of serving global regions.
                     </li>
                     <li>
-                      Traditional backup-node hardware is still recommended for
-                      certain customers.
+                      Traditional node hardware is still recommended for most
+                      customers.
                     </li>
                     <li>
                       This invention marks a historic breakthrough in

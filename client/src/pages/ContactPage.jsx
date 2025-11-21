@@ -4,7 +4,6 @@ import NavBar from "../components/landing/NavBar";
 import ContactHero from "../components/contact/ContactHero";
 import ContactForm from "../components/contact/ContactForm";
 import ContactInfo from "../components/contact/ContactInfo";
-import ContactFAQ from "../components/contact/ContactFAQ";
 import Footer from "../components/landing/Footer";
 
 const ContactPage = () => {
@@ -15,7 +14,6 @@ const ContactPage = () => {
       <ContactHero />
       <ContactForm />
       <ContactInfo />
-      <ContactFAQ />
       <Footer />
     </div>
   );

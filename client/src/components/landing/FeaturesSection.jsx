@@ -123,7 +123,7 @@ const FeaturesSection = () => {
       number: "01",
       title: "Deploy Anywhere",
       description: [
-        "We will help you launch a crypto node in the cloud, or your own locally-hosted hardware, including our MOBILE PHONE CRYPTO NODE (patent-pending), by using BitWisdom’s patent-pending Clearnet security connection procedures and no commitment, ever!",
+        "We will help you launch a crypto node in the cloud, or your own locally-hosted hardware, including our laptop crypto node or our nodeFON (patent-pending), by using BitWisdom’s patent-pending Clearnet security connection procedures and no commitment, ever!",
         "** With the exception of lifetime license to only one business in USA and only one business in any other country, limited-time offer.",
       ],
     },
@@ -137,7 +137,7 @@ const FeaturesSection = () => {
       number: "03",
       title: "Receive Instantly",
       description:
-        "Initial ~0.1 second consumer/merchant settlement is followed by the transactional residuals ported to your business. Final settlement occurs at the lowest network fees using Bluvision's patent-pending AI system directly to your merchants’ connected wallet.",
+        "Initial ~0.1 second consumer/merchant settlement is followed by the transactional residuals ported to your business. Final settlement occurs at the lowest network fees using BitWisdom's patent-pending AI system directly to your merchants’ connected wallet.",
     },
   ];
 

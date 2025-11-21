@@ -97,6 +97,15 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
+                  FAQs
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -109,29 +118,49 @@ const Footer = () => {
             </h3>
             <ul className="space-y-1.5 sm:space-y-2 text-gray-300 text-xs sm:text-sm">
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/privacy-policy"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/terms-of-service"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/cookies-policy"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Cookie Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/aml-kyc-policy"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   AML/KYC Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/license-agreement"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   License Agreement
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

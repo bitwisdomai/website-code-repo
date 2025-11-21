@@ -6,7 +6,7 @@ const ContactInfo = () => {
     {
       icon: FaEnvelope,
       title: "Email Us",
-      content: "support@bitwisdom.ai",
+      content: "info@bitwisdom.ai",
       subContent: "We'll respond within 24 hours",
     },
     {
@@ -57,7 +57,7 @@ const ContactInfo = () => {
                 key={index}
                 className="group bg-black/50 border border-cyan-400/30 rounded-xl p-4 sm:p-5 md:p-6 text-center hover:border-cyan-400 transition-all duration-500 hover:shadow-[0_0_25px_rgba(0,191,255,0.2)] hover:-translate-y-2"
                 style={{
-                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+                  animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                 }}
               >
                 <div className="flex justify-center mb-3 sm:mb-4">
@@ -68,8 +68,12 @@ const ContactInfo = () => {
                 <h3 className="text-white text-base sm:text-lg font-semibold mb-2 group-hover:text-cyan-300 transition-colors duration-300">
                   {detail.title}
                 </h3>
-                <p className="text-cyan-400 font-medium mb-1 text-sm sm:text-base">{detail.content}</p>
-                <p className="text-gray-500 text-xs sm:text-sm">{detail.subContent}</p>
+                <p className="text-cyan-400 font-medium mb-1 text-sm sm:text-base">
+                  {detail.content}
+                </p>
+                <p className="text-gray-500 text-xs sm:text-sm">
+                  {detail.subContent}
+                </p>
               </div>
             );
           })}
