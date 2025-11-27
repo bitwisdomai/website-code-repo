@@ -94,7 +94,9 @@ const BitWisdom = () => {
                   <span className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold">
                     {index + 1}
                   </span>
-                  <p className="flex-1 leading-relaxed text-xs sm:text-sm md:text-base">{point}</p>
+                  <p className="flex-1 leading-relaxed text-xs sm:text-sm md:text-base">
+                    {point}
+                  </p>
                 </div>
               ))}
             </div>
@@ -145,7 +147,9 @@ const BitWisdom = () => {
                   <span className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs sm:text-sm font-semibold">
                     {index + 1}
                   </span>
-                  <p className="flex-1 leading-relaxed text-xs sm:text-sm md:text-base">{point}</p>
+                  <p className="flex-1 leading-relaxed text-xs sm:text-sm md:text-base">
+                    {point}
+                  </p>
                 </div>
               ))}
             </div>
