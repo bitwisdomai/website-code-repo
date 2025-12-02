@@ -8,7 +8,9 @@ import {
   FaDollarSign,
   FaFileUpload,
   FaPaperPlane,
-  FaTimes
+  FaTimes,
+  FaPhone,
+  FaEnvelope
 } from "react-icons/fa";
 import ParticleNetwork from "../about/ParticleNetwork";
 
@@ -16,6 +18,8 @@ const QualifyingForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
     businessName: "",
     businessAddress: "",
+    phoneNumber: "",
+    emailAddress: "",
     businessType: "",
     registrationNumber: "",
     registrationJurisdiction: "",
@@ -165,6 +169,49 @@ const QualifyingForm = ({ onClose }) => {
                       className="w-full bg-black/50 border border-cyan-400/30 rounded-lg pl-11 pr-4 py-3 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300 resize-none"
                       placeholder="Enter complete physical business address where the business operates"
                     ></textarea>
+                  </div>
+                </div>
+
+                {/* Phone Number and Email Address Row */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                  {/* Phone Number */}
+                  <div>
+                    <label htmlFor="phoneNumber" className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
+                      Phone Number <span className="text-cyan-400">*</span>
+                    </label>
+                    <div className="relative">
+                      <FaPhone className="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-400/50 text-sm" />
+                      <input
+                        type="tel"
+                        id="phoneNumber"
+                        name="phoneNumber"
+                        value={formData.phoneNumber}
+                        onChange={handleChange}
+                        required
+                        className="w-full bg-black/50 border border-cyan-400/30 rounded-lg pl-11 pr-4 py-3 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                        placeholder="Enter business phone number"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email Address */}
+                  <div>
+                    <label htmlFor="emailAddress" className="block text-xs sm:text-sm font-medium text-gray-300 mb-2">
+                      Email Address <span className="text-cyan-400">*</span>
+                    </label>
+                    <div className="relative">
+                      <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-400/50 text-sm" />
+                      <input
+                        type="email"
+                        id="emailAddress"
+                        name="emailAddress"
+                        value={formData.emailAddress}
+                        onChange={handleChange}
+                        required
+                        className="w-full bg-black/50 border border-cyan-400/30 rounded-lg pl-11 pr-4 py-3 text-sm sm:text-base text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                        placeholder="Enter business email address"
+                      />
+                    </div>
                   </div>
                 </div>
 

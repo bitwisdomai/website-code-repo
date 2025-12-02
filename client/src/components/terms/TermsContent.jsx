@@ -15,7 +15,7 @@ const TermsContent = () => {
         {
           subtitle: "BitWisdom Ai Network",
           content:
-            "Refers to BitWisdom Ai Network, Inc., the company providing the Software and Services.",
+            'Refers to BitWisdom Ai Network, LaLuz, LLC (hereinafter referred to as "BitWisdom Ai Network", "the Company", "we", "our", or "us"), the company providing the Software and Services.',
         },
         {
           subtitle: "Software",

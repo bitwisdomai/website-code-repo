@@ -15,11 +15,12 @@ const ProductsPage = () => {
   // Handle scroll to section when coming from another page with hash
   useEffect(() => {
     const hash = window.location.hash;
-    if (hash === '#waitlist-buttons') {
+    if (hash) {
       setTimeout(() => {
-        const section = document.getElementById('waitlist-buttons');
+        const sectionId = hash.replace('#', '');
+        const section = document.getElementById(sectionId);
         if (section) {
-          section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 300); // Wait for page to render
     }
@@ -94,7 +95,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Decentralized AI */}
-      <section className="relative bg-[#0E0E0E] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
+      <section id="decentralized-ai" className="relative bg-[#0E0E0E] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -156,7 +157,7 @@ const ProductsPage = () => {
       </section>
 
       {/* Product Features Grid */}
-      <section className="relative bg-black py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
+      <section id="advanced-features" className="relative bg-black py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10 lg:px-16 overflow-hidden">
         {/* Particles Background */}
         <ParticlesBackground variant="default" />
 

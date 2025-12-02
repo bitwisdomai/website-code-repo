@@ -5,7 +5,37 @@ const GetToKnow = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isUSAExpanded, setIsUSAExpanded] = useState(false);
 
-  const points = [
+  // USA section - excludes sentences #29, #30, #31
+  const usaPoints = [
+    "Are you motivated to make profit unlocking an unrealized revenue stream? Then let's get started!",
+    "Profit has been made mining, staking, trading and holding cryptocurrency, and now profit can be made facilitating transactions.",
+    "How did we come up with a way for you to make profit facilitating crypto transactions?",
+    "We always wondered why we couldn't use crypto in everyday life, so surely someone had thought of a way.",
+    "After months of research, we found no one had created a way to use crypto daily, so we set out to make this a reality!",
+    "We wanted transactions to be decentralized, private, secure, fast, simple and at the lowest fees possible.",
+    "We realized our goal would be to embrace today's technology with the use of automation and Ai.",
+    "We started the cybersecurity from the ground up with a patent-pending Clearnet connection method, which is now implemented on all nodes.",
+    "We chose the gold-standard, Bitcoin, but chose the lightning network for speed.",
+    "We modeled our entire patent-pending automated system after the Bitcoin blockchain, to make it as decentralized and redundant as possible.",
+    "We wanted to create an incentive for businesses to run their own node and onboard merchants.",
+    "After 12 patent-pending technologies, we've created inventions we feel honored to share with the world.",
+    "Some businesses have spent voluminous capital to implement systems to accept cryptocurrency and yet others are amassing it.",
+    "Businesses today are building their own Bitcoin Strategic Reserve, and you can too:",
+    "We've created the incentive for your business to run a crypto node; we define as an automated cryptocurrency transactional facilitation server.",
+    "Sounds complicated? We've done the heavy lifting on the back-end to provide a simpler experience.",
+    "Choose your own hardware, our hardware or cloud-based node. We can advise this based on your needs.",
+    "You take care of the modest initial up-front investment and leave the deployment to us.",
+    "Onboard the merchants you're already serving who already trust you with our simple onboarding app.",
+    "If your merchants download, buy or already have a supported crypto wallet, they can start accepting Bitcoin in as little as 30 minutes.",
+    "We allow any of our customers to run their own Ai system server to take full advantage of our node self-healing technology.",
+    "Never-before-seen Ai technology allows all crypto nodes worldwide to work in a collaborative, cooperative way for lowest fee settlement.",
+    "A win-win for everyone, your merchants save on transaction processing fees and you get a residual.",
+    "Our system has no merchant chargebacks or PCI Compliance!",
+    "Contact us or schedule a callback today to transform your merchant network!",
+  ];
+
+  // Global section - includes all sentences
+  const globalPoints = [
     "Are you motivated to make profit unlocking an unrealized revenue stream? Then let's get started!",
     "Profit has been made mining, staking, trading and holding cryptocurrency, and now profit can be made facilitating transactions.",
     "How did we come up with a way for you to make profit facilitating crypto transactions?",
@@ -84,7 +114,7 @@ const GetToKnow = () => {
               }`}
             >
               <div className="border-t border-white/20 pt-6 space-y-4">
-                {points.map((point, index) => (
+                {usaPoints.map((point, index) => (
                   <div
                     key={index}
                     className="flex gap-3 text-gray-200 hover:text-white transition-colors"
@@ -139,7 +169,7 @@ const GetToKnow = () => {
               }`}
             >
               <div className="border-t border-white/20 pt-6 space-y-4">
-                {points.map((point, index) => (
+                {globalPoints.map((point, index) => (
                   <div
                     key={index}
                     className="flex gap-3 text-gray-200 hover:text-white transition-colors"

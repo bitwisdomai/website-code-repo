@@ -3,6 +3,12 @@ import React from "react";
 const LicenseContent = () => {
   const sections = [
     {
+      title: "PARTIES TO THIS AGREEMENT",
+      content: [
+        'This License Agreement is entered into between BitWisdom Ai Network, LaLuz, LLC (hereinafter referred to as "BitWisdom Ai Network", "the Company", "we", "our", or "us") and the Licensee accepting the terms of this Agreement.',
+      ],
+    },
+    {
       title: "DEFINITIONS",
       subsections: [
         {

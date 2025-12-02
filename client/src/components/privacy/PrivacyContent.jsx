@@ -4,6 +4,12 @@ import ProtectedEmail from "../common/ProtectedEmail";
 const PrivacyContent = () => {
   const sections = [
     {
+      title: "INTRODUCTION",
+      content: [
+        'This Privacy Policy describes how BitWisdom Ai Network, LaLuz, LLC (hereinafter referred to as "BitWisdom Ai Network", "the Company", "we", "our", or "us") collects, uses, discloses, and protects the personal and business information of users who access or use our software and services.'
+      ],
+    },
+    {
       title: "1. INFORMATION WE COLLECT",
       content: [
         "We collect personal and business information from users, including Licensees, Merchants, and Consumers, as necessary for the provision of our Software and services. The information we collect includes:"

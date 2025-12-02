@@ -4,6 +4,12 @@ import ProtectedEmail from "../common/ProtectedEmail";
 const CookiesContent = () => {
   const sections = [
     {
+      title: "INTRODUCTION",
+      content: [
+        'This Cookie Policy explains how BitWisdom Ai Network, LaLuz, LLC (hereinafter referred to as "BitWisdom Ai Network", "the Company", "we", "our", or "us") uses cookies and similar tracking technologies on our website.',
+      ],
+    },
+    {
       title: "1. WHAT ARE COOKIES?",
       content: [
         "Cookies are small text files placed on your device when you visit a website. They are used to store information that can help improve your experience and make interactions with the website more efficient. Cookies can also provide us with data to analyze how users interact with our Site, ensuring that we provide the most relevant content and features.",

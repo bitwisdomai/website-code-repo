@@ -201,34 +201,98 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/products"
+                  className="hover:text-cyan-400 transition"
+                  onClick={() => window.scrollTo(0, 0)}
+                >
                   Our Software
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/products#decentralized-ai"
+                  className="hover:text-cyan-400 transition"
+                  onClick={(e) => {
+                    const section = document.getElementById('decentralized-ai');
+
+                    // If already on ProductsPage and section exists
+                    if (window.location.pathname === '/products' && section) {
+                      e.preventDefault();
+                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
                   Decentralized AI
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/products#advanced-features"
+                  className="hover:text-cyan-400 transition"
+                  onClick={(e) => {
+                    const section = document.getElementById('advanced-features');
+
+                    // If already on ProductsPage and section exists
+                    if (window.location.pathname === '/products' && section) {
+                      e.preventDefault();
+                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
                   Clearnet Security
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/products#advanced-features"
+                  className="hover:text-cyan-400 transition"
+                  onClick={(e) => {
+                    const section = document.getElementById('advanced-features');
+
+                    // If already on ProductsPage and section exists
+                    if (window.location.pathname === '/products' && section) {
+                      e.preventDefault();
+                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
                   Node Self-Healing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/products#advanced-features"
+                  className="hover:text-cyan-400 transition"
+                  onClick={(e) => {
+                    const section = document.getElementById('advanced-features');
+
+                    // If already on ProductsPage and section exists
+                    if (window.location.pathname === '/products' && section) {
+                      e.preventDefault();
+                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
                   Automated Backup
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <Link
+                  to="/products#advanced-features"
+                  className="hover:text-cyan-400 transition"
+                  onClick={(e) => {
+                    const section = document.getElementById('advanced-features');
+
+                    // If already on ProductsPage and section exists
+                    if (window.location.pathname === '/products' && section) {
+                      e.preventDefault();
+                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
                   Mobile App for Sales
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
