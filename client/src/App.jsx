@@ -22,6 +22,7 @@ import PageEditorPage from "./pages/admin/PageEditorPage";
 import TemplateManagerPage from "./pages/admin/TemplateManagerPage";
 import UserManagementPage from "./pages/admin/UserManagementPage";
 import SEODashboardPage from "./pages/admin/SEODashboardPage";
+import SubmissionsPage from "./pages/admin/SubmissionsPage";
 
 function App() {
   return (
@@ -96,6 +97,14 @@ function App() {
             element={
               <ProtectedRoute>
                 <SEODashboardPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/submissions"
+            element={
+              <ProtectedRoute>
+                <SubmissionsPage />
               </ProtectedRoute>
             }
           />

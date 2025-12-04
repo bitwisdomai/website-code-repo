@@ -23,28 +23,48 @@ const AmlKycHero = () => {
 
       {/* Content */}
       <div className="relative z-10 px-4 sm:px-6 md:px-12 lg:px-28 py-12 sm:py-16 md:py-24 lg:py-32 text-center">
+        {/* NEW: Legal/Company Header */}
+        <p
+          className="text-gray-400 text-xs sm:text-sm md:text-base mb-4 tracking-wide"
+          style={{
+            animation: "fadeInUp 1s ease-out",
+          }}
+        >
+          <span className="font-semibold text-gray-200">
+            BitWisdom Ai Network, LaLuz, LLC
+          </span>{" "}
+          (hereinafter referred to as{" "}
+          <span className="italic">"BitWisdom Ai Network"</span>)
+        </p>
+
+        {/* Heading */}
         <h1
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 animate-fade-in-up px-2"
           style={{
-            animation: "fadeInUp 1s ease-out"
+            animation: "fadeInUp 1s ease-out 0.2s both",
           }}
         >
           <span className="bg-gradient-to-b from-[#00f0ff] to-white bg-clip-text text-transparent">
             AML/KYC Policy
           </span>
         </h1>
+
+        {/* Subtext */}
         <p
           className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed px-2"
           style={{
-            animation: "fadeInUp 1s ease-out 0.3s both"
+            animation: "fadeInUp 1s ease-out 0.4s both",
           }}
         >
-          Our commitment to preventing money laundering and ensuring compliance with regulatory requirements.
+          Our commitment to preventing money laundering and ensuring compliance
+          with regulatory requirements.
         </p>
+
+        {/* Effective Date */}
         <p
           className="text-gray-400 text-xs sm:text-sm md:text-base mt-4 px-2"
           style={{
-            animation: "fadeInUp 1s ease-out 0.5s both"
+            animation: "fadeInUp 1s ease-out 0.6s both",
           }}
         >
           Effective Date: 11/24/2025

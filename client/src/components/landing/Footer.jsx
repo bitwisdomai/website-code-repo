@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import logo from "../../assets/Logo/BitWisdom_Secondary_Logomark_Registered.png";
 import phoneImg from "../../assets/footerback.png";
 import {
@@ -10,6 +10,8 @@ import {
 } from "react-icons/fa6";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   return (
     <footer className="relative text-white overflow-hidden">
       {/* Background image */}
@@ -40,11 +42,39 @@ const Footer = () => {
               reporting tools.
             </p>
 
+            {/* Social Media Links */}
             <div className="flex items-center gap-3 sm:gap-4 text-gray-400 text-base sm:text-lg">
-              <FaFacebookF className="cursor-pointer hover:text-cyan-400 transition" />
-              <FaInstagram className="cursor-pointer hover:text-cyan-400 transition" />
-              <FaXTwitter className="cursor-pointer hover:text-cyan-400 transition" />
-              <FaPinterestP className="cursor-pointer hover:text-cyan-400 transition" />
+              <a
+                href="https://www.facebook.com/profile.php?id=61581671382754"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF className="cursor-pointer hover:text-cyan-400 transition" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/bitw.isdom68/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram className="cursor-pointer hover:text-cyan-400 transition" />
+              </a>
+
+              <a
+                href="https://x.com/BitWisdomai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaXTwitter className="cursor-pointer hover:text-cyan-400 transition" />
+              </a>
+
+              <a
+                href="https://www.pinterest.com/BitWisdomai/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaPinterestP className="cursor-pointer hover:text-cyan-400 transition" />
+              </a>
             </div>
           </div>
 
@@ -187,37 +217,53 @@ const Footer = () => {
             </h3>
             <ul className="space-y-1.5 sm:space-y-2 text-gray-300 text-xs sm:text-sm">
               <li>
-                <Link
-                  to="/#mobile-node"
-                  className="hover:text-cyan-400 transition"
+                <a
+                  href="/#mobile-node"
+                  className="hover:text-cyan-400 transition cursor-pointer"
                   onClick={(e) => {
-                    const section = document.getElementById(
-                      "mobile-node-section"
-                    );
+                    e.preventDefault();
 
-                    // If already on HomePage and section exists
-                    if (window.location.pathname === "/" && section) {
-                      e.preventDefault();
-                      section.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start",
-                      });
+                    // If already on home page, scroll directly
+                    if (location.pathname === "/") {
+                      const scrollToSection = () => {
+                        const section = document.getElementById("mobile-node-section");
+                        if (section) {
+                          section.scrollIntoView({ behavior: "smooth", block: "start" });
+                          return true;
+                        }
+                        return false;
+                      };
+
+                      // Try to scroll immediately
+                      if (!scrollToSection()) {
+                        // If section not found (lazy loading), poll for it
+                        let attempts = 0;
+                        const maxAttempts = 50;
+                        const intervalId = setInterval(() => {
+                          attempts++;
+                          if (scrollToSection() || attempts >= maxAttempts) {
+                            clearInterval(intervalId);
+                          }
+                        }, 100);
+                      }
                     } else {
-                      // Navigate to HomePage and scroll after load
-                      e.preventDefault();
-                      window.location.href = "/#mobile-node";
-                      // The scroll will be handled by useEffect in HomePage
+                      // Store a flag in sessionStorage to scroll after redirect
+                      sessionStorage.setItem("scrollToMobileNode", "true");
+                      // Navigate to homepage and let the HomePage component handle scrolling
+                      navigate("/");
                     }
                   }}
                 >
                   Mobile Phone Crypto Node
-                </Link>
+                </a>
               </li>
+
               <li>
                 <a href="#" className="hover:text-cyan-400 transition">
                   Laptop Crypto Node
                 </a>
               </li>
+
               <li>
                 <Link
                   to="/products"
@@ -227,85 +273,84 @@ const Footer = () => {
                   Our Software
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/products#decentralized-ai"
                   className="hover:text-cyan-400 transition"
                   onClick={(e) => {
-                    const section = document.getElementById('decentralized-ai');
-
-                    // If already on ProductsPage and section exists
-                    if (window.location.pathname === '/products' && section) {
+                    const section = document.getElementById("decentralized-ai");
+                    if (window.location.pathname === "/products" && section) {
                       e.preventDefault();
-                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      section.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
                   Decentralized AI
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/products#advanced-features"
                   className="hover:text-cyan-400 transition"
                   onClick={(e) => {
-                    const section = document.getElementById('advanced-features');
-
-                    // If already on ProductsPage and section exists
-                    if (window.location.pathname === '/products' && section) {
+                    const section =
+                      document.getElementById("advanced-features");
+                    if (window.location.pathname === "/products" && section) {
                       e.preventDefault();
-                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      section.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
                   Clearnet Security
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/products#advanced-features"
                   className="hover:text-cyan-400 transition"
                   onClick={(e) => {
-                    const section = document.getElementById('advanced-features');
-
-                    // If already on ProductsPage and section exists
-                    if (window.location.pathname === '/products' && section) {
+                    const section =
+                      document.getElementById("advanced-features");
+                    if (window.location.pathname === "/products" && section) {
                       e.preventDefault();
-                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      section.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
                   Node Self-Healing
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/products#advanced-features"
                   className="hover:text-cyan-400 transition"
                   onClick={(e) => {
-                    const section = document.getElementById('advanced-features');
-
-                    // If already on ProductsPage and section exists
-                    if (window.location.pathname === '/products' && section) {
+                    const section =
+                      document.getElementById("advanced-features");
+                    if (window.location.pathname === "/products" && section) {
                       e.preventDefault();
-                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      section.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
                   Automated Backup
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/products#advanced-features"
                   className="hover:text-cyan-400 transition"
                   onClick={(e) => {
-                    const section = document.getElementById('advanced-features');
-
-                    // If already on ProductsPage and section exists
-                    if (window.location.pathname === '/products' && section) {
+                    const section =
+                      document.getElementById("advanced-features");
+                    if (window.location.pathname === "/products" && section) {
                       e.preventDefault();
-                      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      section.scrollIntoView({ behavior: "smooth" });
                     }
                   }}
                 >
@@ -332,7 +377,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="text-cyan-400 hover:text-cyan-300 font-semibold transition"
             >
-              Tapvera
+              Tapvera Technologies
             </a>
           </p>
         </div>

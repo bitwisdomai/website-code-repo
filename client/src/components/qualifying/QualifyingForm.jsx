@@ -13,6 +13,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 
 // ✅ Prevents white page crash if file is missing
 let ParticleNetwork;
@@ -68,19 +69,59 @@ const QualifyingForm = ({ onClose }) => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    const submitData = new FormData();
-    Object.keys(formData).forEach((key) =>
-      submitData.append(key, formData[key])
-    );
-    Object.keys(files).forEach((key) => {
-      if (files[key]) submitData.append(key, files[key]);
-    });
+    try {
+      const submitData = new FormData();
+      Object.keys(formData).forEach((key) =>
+        submitData.append(key, formData[key])
+      );
+      Object.keys(files).forEach((key) => {
+        if (files[key]) submitData.append(key, files[key]);
+      });
 
-    alert("Application submitted successfully!");
-    if (onClose) onClose();
+      const response = await fetch(
+        "http://localhost:5000/api/qualifying/submit",
+        {
+          method: "POST",
+          body: submitData,
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to submit application");
+      }
+
+      toast.success(
+        "Application submitted successfully! We'll review your application and get back to you soon.",
+        {
+          duration: 5000,
+          position: "top-center",
+        }
+      );
+
+      // Close form after a short delay to allow user to see the toast
+      setTimeout(() => {
+        if (onClose) onClose();
+      }, 1500);
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      toast.error(
+        error.message || "Failed to submit application. Please try again.",
+        {
+          duration: 5000,
+          position: "top-center",
+        }
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const businessTypes = [
@@ -96,6 +137,37 @@ const QualifyingForm = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/90 z-50 overflow-y-auto">
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            background: "#0E0E0E",
+            color: "#fff",
+            border: "1px solid rgba(0, 240, 255, 0.3)",
+            borderRadius: "0.75rem",
+            padding: "16px",
+          },
+          success: {
+            iconTheme: {
+              primary: "#00f0ff",
+              secondary: "#0E0E0E",
+            },
+            style: {
+              border: "1px solid rgba(0, 240, 255, 0.5)",
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: "#ef4444",
+              secondary: "#0E0E0E",
+            },
+            style: {
+              border: "1px solid rgba(239, 68, 68, 0.5)",
+            },
+          },
+        }}
+      />
       <div className="min-h-screen py-4 sm:py-8 px-3 sm:px-4 md:px-6 flex items-start sm:items-center justify-center">
         <div className="relative bg-[#0E0E0E] border border-cyan-400/30 rounded-xl max-w-5xl w-full my-4 sm:my-8">
           <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">
@@ -470,10 +542,10 @@ const QualifyingForm = ({ onClose }) => {
               <div className="flex justify-center pt-4">
                 <button
                   type="submit"
-                  disabled={!formData.acceptedTerms}
-                  className="bg-cyan-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition shadow-lg hover:shadow-cyan-400/50 disabled:opacity-50"
+                  disabled={!formData.acceptedTerms || isSubmitting}
+                  className="bg-cyan-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition shadow-lg hover:shadow-cyan-400/50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit Application
+                  {isSubmitting ? "Submitting..." : "Submit Application"}
                 </button>
               </div>
             </form>

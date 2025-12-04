@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import bitwisdomBanner from "../../assets/STATICBANNER.jpg";
+import finalVideo from "../../assets/finalvideo.mp4";
 import BLogo from "../../assets/Logo/Blogo.png";
 
 const Hero = () => {
@@ -39,13 +39,17 @@ const Hero = () => {
 
   return (
     <div className="relative bg-[#212121] text-white overflow-hidden min-h-screen">
-      {/* Background Image */}
-      <img
-        src={bitwisdomBanner}
-        alt="BitWisdom Banner"
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: "right center" }}
-      />
+      >
+        <source src={finalVideo} type="video/mp4" />
+      </video>
 
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/60"></div>

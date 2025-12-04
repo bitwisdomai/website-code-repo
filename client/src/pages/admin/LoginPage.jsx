@@ -14,7 +14,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (isAuthenticated && !loading) {
-      navigate('/admin/dashboard');
+      navigate('/admin/submissions');
     }
   }, [isAuthenticated, loading, navigate]);
 
@@ -33,7 +33,7 @@ const LoginPage = () => {
 
     try {
       await login(formData);
-      navigate('/admin/dashboard');
+      navigate('/admin/submissions');
     } catch (err) {
       setError(err.response?.data?.message || 'Login failed. Please try again.');
     } finally {

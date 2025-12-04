@@ -8,16 +8,58 @@ const ContactForm = () => {
     phone: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // You can integrate API submission here (Express/MongoDB)
+    setIsSubmitting(true);
+    setSubmitStatus({ type: "", message: "" });
+
+    try {
+      const response = await fetch("http://localhost:5000/api/contact/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you! We'll get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          interest: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.message || "Failed to submit form. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -87,13 +129,27 @@ const ContactForm = () => {
             className="w-full bg-transparent border border-cyan-400 rounded-md px-3 sm:px-3.5 py-2 sm:py-2.5 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
           />
 
+          {/* Status Message */}
+          {submitStatus.message && (
+            <div
+              className={`p-3 rounded-md text-sm ${
+                submitStatus.type === "success"
+                  ? "bg-green-500/20 text-green-400 border border-green-400"
+                  : "bg-red-500/20 text-red-400 border border-red-400"
+              }`}
+            >
+              {submitStatus.message}
+            </div>
+          )}
+
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
             <button
               type="submit"
-              className="bg-cyan-400 text-black font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-md hover:bg-cyan-300 transition text-xs sm:text-sm md:text-base w-full sm:w-auto"
+              disabled={isSubmitting}
+              className="bg-cyan-400 text-black font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-md hover:bg-cyan-300 transition text-xs sm:text-sm md:text-base w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Request Contact
+              {isSubmitting ? "Submitting..." : "Request Contact"}
             </button>
             <button
               type="button"

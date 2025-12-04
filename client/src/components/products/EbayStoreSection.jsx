@@ -15,7 +15,7 @@ const EbayStoreSection = () => {
 
   const handleVisitStore = () => {
     window.open(
-      "https://www.ebay.com/str/bitwisdomstore",
+      "https://www.ebay.com/str/bitwisdomai",
       "_blank",
       "noopener,noreferrer"
     );
@@ -32,14 +32,25 @@ const EbayStoreSection = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call with timeout
-    setTimeout(() => {
-      // Here you can add logic to send the data to your backend/API
-      console.log("Waitlist submission:", formData);
+    try {
+      const response = await fetch("http://localhost:5000/api/waitlist/join", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to join waitlist");
+      }
+
       setIsSubmitting(false);
       setIsSubmitted(true);
 
@@ -50,7 +61,11 @@ const EbayStoreSection = () => {
         setFormData({ name: "", email: "", waitlistType: "" });
         setWaitlistType("");
       }, 3000);
-    }, 1500);
+    } catch (error) {
+      console.error("Error joining waitlist:", error);
+      setIsSubmitting(false);
+      alert(error.message || "Failed to join waitlist. Please try again.");
+    }
   };
 
   const closePopup = () => {
@@ -212,7 +227,10 @@ const EbayStoreSection = () => {
         </div>
 
         {/* Waitlist Buttons */}
-        <div id="waitlist-buttons" className="flex flex-col sm:flex-row gap-4 justify-center mt-12 md:mt-16">
+        <div
+          id="waitlist-buttons"
+          className="flex flex-col sm:flex-row gap-4 justify-center mt-12 md:mt-16"
+        >
           <button
             onClick={() => openWaitlistPopup("Laptop Crypto Node")}
             className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-bold hover:from-cyan-300 hover:to-blue-400 transition shadow-lg hover:shadow-cyan-400/50 inline-flex items-center justify-center group"

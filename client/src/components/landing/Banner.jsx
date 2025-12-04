@@ -13,20 +13,70 @@ const Banner = () => {
       <div className="flex justify-between items-center">
         {/* Social Icons */}
         <div className="flex gap-2 sm:gap-4 md:gap-6 text-brand-primary">
-          <img src={fb_icon} alt="Facebook" className="cursor-pointer h-5 sm:h-6 md:h-8" loading="lazy" />
-          <img src={insta_icon} alt="Instagram" className="cursor-pointer h-5 sm:h-6 md:h-8" loading="lazy" />
-          <img src={X_icon} alt="X" className="cursor-pointer h-5 sm:h-6 md:h-8" loading="lazy" />
-          <img
-            src={pinterest_icon}
-            alt="Pintrest"
-            className="cursor-pointer h-5 sm:h-6 md:h-8"
-            loading="lazy"
-          />
+          <a
+            href="https://www.facebook.com/profile.php?id=61581671382754"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={fb_icon}
+              alt="Facebook"
+              className="cursor-pointer h-5 sm:h-6 md:h-8"
+              loading="lazy"
+            />
+          </a>
+
+          <a
+            href="https://www.instagram.com/bitw.isdom68/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={insta_icon}
+              alt="Instagram"
+              className="cursor-pointer h-5 sm:h-6 md:h-8"
+              loading="lazy"
+            />
+          </a>
+
+          <a
+            href="https://x.com/BitWisdomai"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={X_icon}
+              alt="X"
+              className="cursor-pointer h-5 sm:h-6 md:h-8"
+              loading="lazy"
+            />
+          </a>
+
+          <a
+            href="https://www.pinterest.com/BitWisdomai/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={pinterest_icon}
+              alt="Pinterest"
+              className="cursor-pointer h-5 sm:h-6 md:h-8"
+              loading="lazy"
+            />
+          </a>
         </div>
 
         {/* Logo - Centered on all screens */}
-        <Link to="/" className="absolute left-1/2 transform -translate-x-1/2 flex items-center">
-          <img src={logo} alt="BitWisdom Logo" className="h-8 sm:h-10 md:h-12 cursor-pointer hover:opacity-80 transition" loading="eager" />
+        <Link
+          to="/"
+          className="absolute left-1/2 transform -translate-x-1/2 flex items-center"
+        >
+          <img
+            src={logo}
+            alt="BitWisdom Logo"
+            className="h-8 sm:h-10 md:h-12 cursor-pointer hover:opacity-80 transition"
+            loading="eager"
+          />
         </Link>
 
         {/* Right Section */}

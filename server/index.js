@@ -22,6 +22,9 @@ import authRoutes from './routes/auth.js';
 import pageRoutes from './routes/pages.js';
 import templateRoutes from './routes/templates.js';
 import seoRoutes from './routes/seo.js';
+import qualifyingRoutes from './routes/qualifying.js';
+import waitlistRoutes from './routes/waitlist.js';
+import contactRoutes from './routes/contact.js';
 
 // Basic route
 app.get('/', (req, res) => {
@@ -33,7 +36,10 @@ app.get('/', (req, res) => {
       auth: '/api/auth',
       pages: '/api/pages',
       templates: '/api/templates',
-      seo: '/api/seo'
+      seo: '/api/seo',
+      qualifying: '/api/qualifying',
+      waitlist: '/api/waitlist',
+      contact: '/api/contact'
     }
   });
 });
@@ -43,6 +49,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/pages', pageRoutes);
 app.use('/api/templates', templateRoutes);
 app.use('/api/seo', seoRoutes);
+app.use('/api/qualifying', qualifyingRoutes);
+app.use('/api/waitlist', waitlistRoutes);
+app.use('/api/contact', contactRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
