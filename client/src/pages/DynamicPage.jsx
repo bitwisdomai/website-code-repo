@@ -1,19 +1,18 @@
-import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { pagesAPI } from '../services/api';
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { pagesAPI } from "../services/api";
 
 // Import template components
-import LandingTemplate from '../components/templates/LandingTemplate';
-import GenericTemplate from '../components/templates/GenericTemplate';
-import LegalTemplate from '../components/templates/LegalTemplate';
-import BlogTemplate from '../components/templates/BlogTemplate';
+import LandingTemplate from "../components/templates/LandingTemplate";
+import GenericTemplate from "../components/templates/GenericTemplate";
+import LegalTemplate from "../components/templates/LegalTemplate";
+import BlogTemplate from "../components/templates/BlogTemplate";
 
 const templateComponents = {
   landing: LandingTemplate,
   generic: GenericTemplate,
   legal: LegalTemplate,
-  blog: BlogTemplate
+  blog: BlogTemplate,
 };
 
 const DynamicPage = () => {
@@ -39,10 +38,13 @@ const DynamicPage = () => {
           pageData.seo = {
             ...pageData.seo,
             metaTitle: selectedVariant.metaTitle || pageData.seo?.metaTitle,
-            metaDescription: selectedVariant.metaDescription || pageData.seo?.metaDescription,
-            metaKeywords: selectedVariant.metaKeywords || pageData.seo?.metaKeywords,
+            metaDescription:
+              selectedVariant.metaDescription || pageData.seo?.metaDescription,
+            metaKeywords:
+              selectedVariant.metaKeywords || pageData.seo?.metaKeywords,
             ogTitle: selectedVariant.ogTitle || pageData.seo?.ogTitle,
-            ogDescription: selectedVariant.ogDescription || pageData.seo?.ogDescription,
+            ogDescription:
+              selectedVariant.ogDescription || pageData.seo?.ogDescription,
             ogImage: selectedVariant.ogImage || pageData.seo?.ogImage,
           };
           pageData._activeVariant = selectedVariant.name; // Store for debugging
@@ -50,12 +52,12 @@ const DynamicPage = () => {
 
         setPage(pageData);
       } catch (err) {
-        console.error('Error fetching page:', err);
-        setError(err.response?.data?.message || 'Page not found');
+        console.error("Error fetching page:", err);
+        setError(err.response?.data?.message || "Page not found");
 
         // Redirect to 404 after a short delay
         setTimeout(() => {
-          navigate('/404', { replace: true });
+          navigate("/404", { replace: true });
         }, 2000);
       } finally {
         setLoading(false);
@@ -85,7 +87,7 @@ const DynamicPage = () => {
           <h1 className="text-4xl font-bold text-gray-800 mb-4">404</h1>
           <p className="text-gray-600 mb-4">{error}</p>
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
             Go Home
@@ -100,43 +102,52 @@ const DynamicPage = () => {
   }
 
   // Get the appropriate template component
-  const TemplateComponent = templateComponents[page.templateType] || GenericTemplate;
+  const TemplateComponent =
+    templateComponents[page.templateType] || GenericTemplate;
 
   // Prepare SEO meta tags
   const {
     metaTitle = page.title,
-    metaDescription = '',
+    metaDescription = "",
     metaKeywords = [],
     ogTitle = page.title,
     ogDescription = metaDescription,
-    ogImage = '',
-    canonicalUrl = '',
+    ogImage = "",
+    canonicalUrl = "",
     noindex = false,
-    nofollow = false
+    nofollow = false,
   } = page.seo || {};
 
-  const robotsContent = `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`;
+  const robotsContent = `${noindex ? "noindex" : "index"},${
+    nofollow ? "nofollow" : "follow"
+  }`;
 
   return (
     <>
       <Helmet>
         <title>{metaTitle}</title>
-        {metaDescription && <meta name="description" content={metaDescription} />}
+        {metaDescription && (
+          <meta name="description" content={metaDescription} />
+        )}
         {metaKeywords && metaKeywords.length > 0 && (
-          <meta name="keywords" content={metaKeywords.join(', ')} />
+          <meta name="keywords" content={metaKeywords.join(", ")} />
         )}
         <meta name="robots" content={robotsContent} />
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={ogTitle} />
-        {ogDescription && <meta property="og:description" content={ogDescription} />}
+        {ogDescription && (
+          <meta property="og:description" content={ogDescription} />
+        )}
         {ogImage && <meta property="og:image" content={ogImage} />}
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={ogTitle} />
-        {ogDescription && <meta name="twitter:description" content={ogDescription} />}
+        {ogDescription && (
+          <meta name="twitter:description" content={ogDescription} />
+        )}
         {ogImage && <meta name="twitter:image" content={ogImage} />}
 
         {/* Canonical URL */}

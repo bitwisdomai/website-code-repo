@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative bg-[#0E0E0E] text-white border-b border-gray-800 overflow-visible">
+    <nav className="relative bg-black text-white border-b border-gray-800 overflow-visible">
       <div className="flex w-full items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4">
         {/* Centered Nav Links with Equal Spacing */}
         <div className="hidden lg:flex items-center justify-center gap-20 text-[15px] font-medium tracking-tight flex-1">

@@ -7,9 +7,9 @@ const CURRENCIES = {
   CAD: { symbol: "C$", name: "Canadian Dollar", rate: 1.36 },
   MXN: { symbol: "$", name: "Mexican Peso", rate: 17.08 },
   BRL: { symbol: "R$", name: "Brazilian Real", rate: 4.97 },
-  ARS: { symbol: "$", name: "Argentine Peso", rate: 350.00 },
-  CLP: { symbol: "$", name: "Chilean Peso", rate: 890.00 },
-  COP: { symbol: "$", name: "Colombian Peso", rate: 3950.00 },
+  ARS: { symbol: "$", name: "Argentine Peso", rate: 350.0 },
+  CLP: { symbol: "$", name: "Chilean Peso", rate: 890.0 },
+  COP: { symbol: "$", name: "Colombian Peso", rate: 3950.0 },
   PEN: { symbol: "S/", name: "Peruvian Sol", rate: 3.72 },
 
   // Europe
@@ -17,34 +17,34 @@ const CURRENCIES = {
   GBP: { symbol: "£", name: "British Pound", rate: 0.79 },
   CHF: { symbol: "Fr", name: "Swiss Franc", rate: 0.88 },
   NOK: { symbol: "kr", name: "Norwegian Krone", rate: 10.85 },
-  SEK: { symbol: "kr", name: "Swedish Krona", rate: 10.60 },
+  SEK: { symbol: "kr", name: "Swedish Krona", rate: 10.6 },
   DKK: { symbol: "kr", name: "Danish Krone", rate: 6.87 },
   PLN: { symbol: "zł", name: "Polish Zloty", rate: 4.02 },
-  CZK: { symbol: "Kč", name: "Czech Koruna", rate: 22.50 },
-  HUF: { symbol: "Ft", name: "Hungarian Forint", rate: 355.00 },
+  CZK: { symbol: "Kč", name: "Czech Koruna", rate: 22.5 },
+  HUF: { symbol: "Ft", name: "Hungarian Forint", rate: 355.0 },
   RON: { symbol: "lei", name: "Romanian Leu", rate: 4.57 },
-  BGN: { symbol: "лв", name: "Bulgarian Lev", rate: 1.80 },
-  RUB: { symbol: "₽", name: "Russian Ruble", rate: 92.00 },
-  UAH: { symbol: "₴", name: "Ukrainian Hryvnia", rate: 36.50 },
-  TRY: { symbol: "₺", name: "Turkish Lira", rate: 32.50 },
+  BGN: { symbol: "лв", name: "Bulgarian Lev", rate: 1.8 },
+  RUB: { symbol: "₽", name: "Russian Ruble", rate: 92.0 },
+  UAH: { symbol: "₴", name: "Ukrainian Hryvnia", rate: 36.5 },
+  TRY: { symbol: "₺", name: "Turkish Lira", rate: 32.5 },
 
   // Asia
   INR: { symbol: "₹", name: "Indian Rupee", rate: 83.12 },
   CNY: { symbol: "¥", name: "Chinese Yuan", rate: 7.24 },
-  JPY: { symbol: "¥", name: "Japanese Yen", rate: 149.50 },
-  KRW: { symbol: "₩", name: "South Korean Won", rate: 1330.00 },
+  JPY: { symbol: "¥", name: "Japanese Yen", rate: 149.5 },
+  KRW: { symbol: "₩", name: "South Korean Won", rate: 1330.0 },
   SGD: { symbol: "S$", name: "Singapore Dollar", rate: 1.35 },
   HKD: { symbol: "HK$", name: "Hong Kong Dollar", rate: 7.83 },
-  TWD: { symbol: "NT$", name: "Taiwan Dollar", rate: 31.50 },
-  THB: { symbol: "฿", name: "Thai Baht", rate: 34.80 },
+  TWD: { symbol: "NT$", name: "Taiwan Dollar", rate: 31.5 },
+  THB: { symbol: "฿", name: "Thai Baht", rate: 34.8 },
   MYR: { symbol: "RM", name: "Malaysian Ringgit", rate: 4.48 },
-  IDR: { symbol: "Rp", name: "Indonesian Rupiah", rate: 15650.00 },
-  PHP: { symbol: "₱", name: "Philippine Peso", rate: 56.50 },
-  VND: { symbol: "₫", name: "Vietnamese Dong", rate: 24500.00 },
-  PKR: { symbol: "₨", name: "Pakistani Rupee", rate: 278.00 },
-  BDT: { symbol: "৳", name: "Bangladeshi Taka", rate: 110.00 },
-  LKR: { symbol: "Rs", name: "Sri Lankan Rupee", rate: 325.00 },
-  NPR: { symbol: "Rs", name: "Nepalese Rupee", rate: 133.00 },
+  IDR: { symbol: "Rp", name: "Indonesian Rupiah", rate: 15650.0 },
+  PHP: { symbol: "₱", name: "Philippine Peso", rate: 56.5 },
+  VND: { symbol: "₫", name: "Vietnamese Dong", rate: 24500.0 },
+  PKR: { symbol: "₨", name: "Pakistani Rupee", rate: 278.0 },
+  BDT: { symbol: "৳", name: "Bangladeshi Taka", rate: 110.0 },
+  LKR: { symbol: "Rs", name: "Sri Lankan Rupee", rate: 325.0 },
+  NPR: { symbol: "Rs", name: "Nepalese Rupee", rate: 133.0 },
 
   // Middle East
   AED: { symbol: "د.إ", name: "UAE Dirham", rate: 3.67 },
@@ -61,56 +61,179 @@ const CURRENCIES = {
   NZD: { symbol: "NZ$", name: "New Zealand Dollar", rate: 1.66 },
 
   // Africa
-  ZAR: { symbol: "R", name: "South African Rand", rate: 18.50 },
-  EGP: { symbol: "E£", name: "Egyptian Pound", rate: 30.90 },
-  NGN: { symbol: "₦", name: "Nigerian Naira", rate: 1540.00 },
-  KES: { symbol: "KSh", name: "Kenyan Shilling", rate: 129.00 },
-  GHS: { symbol: "₵", name: "Ghanaian Cedi", rate: 15.50 },
-  MAD: { symbol: "د.م.", name: "Moroccan Dirham", rate: 10.10 },
-  TND: { symbol: "د.ت", name: "Tunisian Dinar", rate: 3.10 },
+  ZAR: { symbol: "R", name: "South African Rand", rate: 18.5 },
+  EGP: { symbol: "E£", name: "Egyptian Pound", rate: 30.9 },
+  NGN: { symbol: "₦", name: "Nigerian Naira", rate: 1540.0 },
+  KES: { symbol: "KSh", name: "Kenyan Shilling", rate: 129.0 },
+  GHS: { symbol: "₵", name: "Ghanaian Cedi", rate: 15.5 },
+  MAD: { symbol: "د.م.", name: "Moroccan Dirham", rate: 10.1 },
+  TND: { symbol: "د.ت", name: "Tunisian Dinar", rate: 3.1 },
 };
 
 // Country to currency mapping (expanded to 100+ countries)
 const COUNTRY_CURRENCY_MAP = {
   // Americas
-  US: "USD", CA: "CAD", MX: "MXN", BR: "BRL", AR: "ARS", CL: "CLP",
-  CO: "COP", PE: "PEN", VE: "USD", EC: "USD", BO: "USD", PY: "USD",
-  UY: "USD", CR: "USD", PA: "USD", GT: "USD", HN: "USD", SV: "USD",
-  NI: "USD", DO: "USD", CU: "USD", JM: "USD", HT: "USD", TT: "USD",
+  US: "USD",
+  CA: "CAD",
+  MX: "MXN",
+  BR: "BRL",
+  AR: "ARS",
+  CL: "CLP",
+  CO: "COP",
+  PE: "PEN",
+  VE: "USD",
+  EC: "USD",
+  BO: "USD",
+  PY: "USD",
+  UY: "USD",
+  CR: "USD",
+  PA: "USD",
+  GT: "USD",
+  HN: "USD",
+  SV: "USD",
+  NI: "USD",
+  DO: "USD",
+  CU: "USD",
+  JM: "USD",
+  HT: "USD",
+  TT: "USD",
 
   // Europe
-  GB: "GBP", IE: "EUR", CH: "CHF", NO: "NOK", SE: "SEK", DK: "DKK",
-  PL: "PLN", CZ: "CZK", HU: "HUF", RO: "RON", BG: "BGN", RU: "RUB",
-  UA: "UAH", TR: "TRY", RS: "EUR", HR: "EUR", BA: "EUR", MK: "EUR",
-  AL: "EUR", XK: "EUR", ME: "EUR", IS: "EUR", BY: "RUB",
+  GB: "GBP",
+  IE: "EUR",
+  CH: "CHF",
+  NO: "NOK",
+  SE: "SEK",
+  DK: "DKK",
+  PL: "PLN",
+  CZ: "CZK",
+  HU: "HUF",
+  RO: "RON",
+  BG: "BGN",
+  RU: "RUB",
+  UA: "UAH",
+  TR: "TRY",
+  RS: "EUR",
+  HR: "EUR",
+  BA: "EUR",
+  MK: "EUR",
+  AL: "EUR",
+  XK: "EUR",
+  ME: "EUR",
+  IS: "EUR",
+  BY: "RUB",
 
   // EU countries using Euro
-  DE: "EUR", FR: "EUR", IT: "EUR", ES: "EUR", NL: "EUR", BE: "EUR",
-  AT: "EUR", PT: "EUR", FI: "EUR", GR: "EUR", LU: "EUR", SI: "EUR",
-  CY: "EUR", MT: "EUR", SK: "EUR", EE: "EUR", LV: "EUR", LT: "EUR",
+  DE: "EUR",
+  FR: "EUR",
+  IT: "EUR",
+  ES: "EUR",
+  NL: "EUR",
+  BE: "EUR",
+  AT: "EUR",
+  PT: "EUR",
+  FI: "EUR",
+  GR: "EUR",
+  LU: "EUR",
+  SI: "EUR",
+  CY: "EUR",
+  MT: "EUR",
+  SK: "EUR",
+  EE: "EUR",
+  LV: "EUR",
+  LT: "EUR",
 
   // Asia
-  IN: "INR", CN: "CNY", JP: "JPY", KR: "KRW", SG: "SGD", HK: "HKD",
-  TW: "TWD", TH: "THB", MY: "MYR", ID: "IDR", PH: "PHP", VN: "VND",
-  PK: "PKR", BD: "BDT", LK: "LKR", NP: "NPR", MM: "USD", KH: "USD",
-  LA: "USD", MN: "USD", BN: "USD", MO: "HKD", KZ: "USD", UZ: "USD",
-  TM: "USD", TJ: "USD", KG: "USD", AF: "USD",
+  IN: "INR",
+  CN: "CNY",
+  JP: "JPY",
+  KR: "KRW",
+  SG: "SGD",
+  HK: "HKD",
+  TW: "TWD",
+  TH: "THB",
+  MY: "MYR",
+  ID: "IDR",
+  PH: "PHP",
+  VN: "VND",
+  PK: "PKR",
+  BD: "BDT",
+  LK: "LKR",
+  NP: "NPR",
+  MM: "USD",
+  KH: "USD",
+  LA: "USD",
+  MN: "USD",
+  BN: "USD",
+  MO: "HKD",
+  KZ: "USD",
+  UZ: "USD",
+  TM: "USD",
+  TJ: "USD",
+  KG: "USD",
+  AF: "USD",
 
   // Middle East
-  AE: "AED", SA: "SAR", QA: "QAR", KW: "KWD", OM: "OMR", BH: "BHD",
-  IL: "ILS", JO: "JOD", LB: "USD", SY: "USD", IQ: "USD", YE: "USD",
-  IR: "USD", PS: "USD",
+  AE: "AED",
+  SA: "SAR",
+  QA: "QAR",
+  KW: "KWD",
+  OM: "OMR",
+  BH: "BHD",
+  IL: "ILS",
+  JO: "JOD",
+  LB: "USD",
+  SY: "USD",
+  IQ: "USD",
+  YE: "USD",
+  IR: "USD",
+  PS: "USD",
 
   // Oceania
-  AU: "AUD", NZ: "NZD", FJ: "USD", PG: "USD", NC: "EUR", PF: "EUR",
+  AU: "AUD",
+  NZ: "NZD",
+  FJ: "USD",
+  PG: "USD",
+  NC: "EUR",
+  PF: "EUR",
 
   // Africa
-  ZA: "ZAR", EG: "EGP", NG: "NGN", KE: "KES", GH: "GHS", MA: "MAD",
-  TN: "TND", DZ: "USD", LY: "USD", SD: "USD", ET: "USD", TZ: "USD",
-  UG: "USD", AO: "USD", MZ: "USD", ZW: "USD", BW: "USD", NA: "USD",
-  ZM: "USD", MW: "USD", RW: "USD", SN: "USD", CI: "EUR", CM: "EUR",
-  MG: "USD", ML: "EUR", BF: "EUR", NE: "EUR", TD: "EUR", MR: "USD",
-  BJ: "EUR", TG: "EUR", SL: "USD", LR: "USD", GM: "USD", GN: "USD",
+  ZA: "ZAR",
+  EG: "EGP",
+  NG: "NGN",
+  KE: "KES",
+  GH: "GHS",
+  MA: "MAD",
+  TN: "TND",
+  DZ: "USD",
+  LY: "USD",
+  SD: "USD",
+  ET: "USD",
+  TZ: "USD",
+  UG: "USD",
+  AO: "USD",
+  MZ: "USD",
+  ZW: "USD",
+  BW: "USD",
+  NA: "USD",
+  ZM: "USD",
+  MW: "USD",
+  RW: "USD",
+  SN: "USD",
+  CI: "EUR",
+  CM: "EUR",
+  MG: "USD",
+  ML: "EUR",
+  BF: "EUR",
+  NE: "EUR",
+  TD: "EUR",
+  MR: "USD",
+  BJ: "EUR",
+  TG: "EUR",
+  SL: "USD",
+  LR: "USD",
+  GM: "USD",
+  GN: "USD",
 };
 
 const ProfitCalculator = () => {
@@ -130,7 +253,8 @@ const ProfitCalculator = () => {
         const data = await response.json();
 
         if (data.country_code) {
-          const detectedCurrency = COUNTRY_CURRENCY_MAP[data.country_code] || "USD";
+          const detectedCurrency =
+            COUNTRY_CURRENCY_MAP[data.country_code] || "USD";
           setCurrency(detectedCurrency);
 
           // Convert default amount to detected currency
@@ -289,32 +413,36 @@ const ProfitCalculator = () => {
         </div>
 
         {/* Calculator Box */}
-        <div className="bg-white/95 text-gray-800 border border-gray-300 rounded-lg shadow-lg p-8 sm:p-10 md:p-12 grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-12 md:gap-14">
+        <div className="bg-transparent text-white border border-[#00f0ff] rounded-lg shadow-lg p-8 sm:p-10 md:p-12 grid grid-cols-1 lg:grid-cols-[1.4fr_0.6fr] gap-12 md:gap-14">
           {/* LEFT SECTION */}
           <div>
             <div className="mb-12">
-              <label className="block text-gray-800 text-base font-semibold mb-3">
+              <label className="block text-white text-base font-semibold mb-3">
                 Total Monthly Transactions ({currency})
-                {isDetecting && <span className="text-sky-500 text-sm font-normal ml-2">(Detecting currency...)</span>}
+                {isDetecting && (
+                  <span className="text-sky-500 text-sm font-normal ml-2">
+                    (Detecting currency...)
+                  </span>
+                )}
               </label>
               <input
                 type="number"
                 value={totalAmount}
                 onChange={(e) => setTotalAmount(e.target.value)}
-                className="w-full border border-gray-300 rounded-md px-5 py-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-sky-400 text-lg"
+                className="w-full border border-[#00f0ff] rounded-md px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-sky-400 text-lg"
               />
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mt-12">
               <button
                 onClick={resetToDefaults}
-                className="border border-gray-400 text-gray-700 font-semibold px-6 py-3 rounded-md hover:bg-gray-100 transition"
+                className="border border-[#00f0ff] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#00f0ff] text-black transition"
               >
                 Reset to Defaults
               </button>
             </div>
 
-            <p className="text-gray-500 text-sm leading-relaxed mt-12 max-w-2xl">
+            <p className="text-white text-sm leading-relaxed mt-12 max-w-2xl">
               *This estimate does not include equipment, electricity, or other
               overhead costs. Profit is based on BitWisdom's gross model minus
               tiered operational fees.
@@ -322,26 +450,26 @@ const ProfitCalculator = () => {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="bg-sky-50 rounded-md p-8 border border-sky-100 shadow-inner self-start">
+          <div className="bg-transparent rounded-md p-8 border border-[#00f0ff] shadow-inner self-start">
             <div className="mb-10">
-              <p className="text-gray-700 text-base font-medium mb-2">
+              <p className="text-white text-base font-medium mb-2">
                 Estimated Monthly Profit
               </p>
-              <p className="text-sky-600 text-5xl font-bold">
+              <p className="text-white text-5xl font-bold">
                 {formatCurrency(monthlyProfit)}
               </p>
             </div>
 
-            <div className="border-t border-gray-300 my-8"></div>
+            <div className="border-t border-[#00f0ff] my-8"></div>
 
             <div>
-              <p className="text-gray-700 text-base font-medium mb-2">
+              <p className="text-white text-base font-medium mb-2">
                 Estimated Annual Profit
               </p>
-              <p className="text-sky-600 text-4xl font-bold">
+              <p className="text-white text-4xl font-bold">
                 {formatCurrency(annualProfit)}
               </p>
-              <p className="text-gray-400 text-xs mt-3">
+              <p className="text-white text-xs mt-3">
                 Auto-detected: {CURRENCIES[currency].name}
               </p>
             </div>
