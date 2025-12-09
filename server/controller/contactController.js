@@ -1,36 +1,61 @@
 import Contact from '../models/Contact.js';
+import { sendContactFormEmail } from '../utils/emailService.js';
 
 // Create a new contact submission
 export const createContact = async (req, res) => {
+  console.log('📧 Contact form submission received');
+  console.log('Request body:', req.body);
+
   try {
-    const { name, email, interest, phone, message } = req.body;
+    const { name, email, organization, subject, message } = req.body;
 
     // Validate required fields
     if (!name || !email) {
+      console.log('❌ Validation failed: missing name or email');
       return res.status(400).json({
         success: false,
         message: 'Name and email are required'
       });
     }
 
+    console.log('✅ Validation passed, creating contact...');
+
     // Create new contact
     const contact = new Contact({
       name,
       email,
-      interest: interest || '',
-      phone: phone || '',
+      organization: organization || '',
+      subject: subject || '',
       message: message || ''
     });
 
+    console.log('💾 Saving to database...');
     await contact.save();
+    console.log('✅ Saved to database successfully');
 
+    // Send email notification to owner (fire and forget - don't wait for it)
+    console.log('📨 Triggering email send (background)...');
+    sendContactFormEmail({
+      name,
+      email,
+      organization,
+      subject,
+      message
+    }).then(() => {
+      console.log('✅ Email sent successfully');
+    }).catch((emailError) => {
+      console.error('❌ Failed to send email notification:', emailError.message);
+    });
+
+    // Respond immediately to user
+    console.log('✅ Sending success response to client');
     res.status(201).json({
       success: true,
       message: 'Contact form submitted successfully',
       data: contact
     });
   } catch (error) {
-    console.error('Error creating contact:', error);
+    console.error('❌ Error creating contact:', error);
     res.status(500).json({
       success: false,
       message: 'Failed to submit contact form',

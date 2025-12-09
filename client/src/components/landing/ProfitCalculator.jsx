@@ -450,26 +450,26 @@ const ProfitCalculator = () => {
           </div>
 
           {/* RIGHT SECTION */}
-          <div className="bg-transparent rounded-md p-8 border border-[#00f0ff] shadow-inner self-start">
+          <div className="bg-[#00f0ff] rounded-md p-8 border border-[#00f0ff] shadow-inner self-start">
             <div className="mb-10">
-              <p className="text-white text-base font-medium mb-2">
+              <p className="text-black text-base font-medium mb-2">
                 Estimated Monthly Profit
               </p>
-              <p className="text-white text-5xl font-bold">
+              <p className="text-black text-5xl font-bold">
                 {formatCurrency(monthlyProfit)}
               </p>
             </div>
 
-            <div className="border-t border-[#00f0ff] my-8"></div>
+            <div className="border-t border-black my-8"></div>
 
             <div>
-              <p className="text-white text-base font-medium mb-2">
+              <p className="text-black text-base font-medium mb-2">
                 Estimated Annual Profit
               </p>
-              <p className="text-white text-4xl font-bold">
+              <p className="text-black text-4xl font-bold">
                 {formatCurrency(annualProfit)}
               </p>
-              <p className="text-white text-xs mt-3">
+              <p className="text-black text-xs mt-3">
                 Auto-detected: {CURRENCIES[currency].name}
               </p>
             </div>

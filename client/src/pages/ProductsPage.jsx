@@ -422,15 +422,14 @@ const ProductsPage = () => {
             processing
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => {
-                navigate('/contact');
-                window.scrollTo(0, 0);
-              }}
-              className="bg-cyan-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded text-sm sm:text-base font-semibold hover:bg-cyan-300 transition cursor-pointer"
+            <a
+              href="https://calendly.com/bitwisdomai/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-cyan-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded text-sm sm:text-base font-semibold hover:bg-cyan-300 transition text-center inline-block"
             >
               Schedule A Callback
-            </button>
+            </a>
             <button
               onClick={() => setShowQualifyingForm(true)}
               className="border border-cyan-400 text-white px-6 sm:px-8 py-3 sm:py-4 rounded text-sm sm:text-base font-semibold hover:bg-cyan-400/10 transition cursor-pointer"

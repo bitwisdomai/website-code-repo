@@ -13,12 +13,12 @@ const contactSchema = new mongoose.Schema({
     trim: true,
     match: [/^\S+@\S+\.\S+$/, 'Please provide a valid email address']
   },
-  interest: {
+  organization: {
     type: String,
-    enum: ['licensing', 'partnership', 'demo', 'support', ''],
+    trim: true,
     default: ''
   },
-  phone: {
+  subject: {
     type: String,
     trim: true,
     default: ''

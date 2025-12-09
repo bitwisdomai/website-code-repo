@@ -1,4 +1,5 @@
 import QualifyingApplication from '../models/QualifyingApplication.js';
+import { sendQualifyingApplicationEmail } from '../utils/emailService.js';
 import multer from 'multer';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -96,6 +97,28 @@ export const createQualifyingApplication = async (req, res) => {
 
     await application.save();
 
+    // Send email notification to owner (fire and forget - don't wait for it)
+    sendQualifyingApplicationEmail({
+      businessName,
+      businessAddress,
+      phoneNumber,
+      emailAddress,
+      businessType,
+      registrationNumber,
+      registrationJurisdiction,
+      taxId,
+      beneficialOwners,
+      nationality,
+      corporateStructure,
+      sourceOfFunds,
+      intendedUse
+    }).then(() => {
+      console.log('✅ Qualifying application email sent successfully');
+    }).catch((emailError) => {
+      console.error('❌ Failed to send qualifying application email:', emailError.message);
+    });
+
+    // Respond immediately to user
     res.status(201).json({
       success: true,
       message: 'Application submitted successfully',

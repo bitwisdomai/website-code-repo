@@ -28,6 +28,8 @@ const ContactForm = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        cache: "no-store",
+        mode: "cors",
       });
 
       const data = await response.json();
@@ -151,12 +153,14 @@ const ContactForm = () => {
             >
               {isSubmitting ? "Submitting..." : "Request Contact"}
             </button>
-            <button
-              type="button"
-              className="border border-cyan-400 text-white font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-md hover:bg-cyan-400 hover:text-black transition text-xs sm:text-sm md:text-base w-full sm:w-auto"
+            <a
+              href="https://calendly.com/bitwisdomai/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-cyan-400 text-white font-semibold px-4 sm:px-5 py-2 sm:py-2.5 rounded-md hover:bg-cyan-400 hover:text-black transition text-xs sm:text-sm md:text-base w-full sm:w-auto text-center inline-block"
             >
               Schedule a Call
-            </button>
+            </a>
           </div>
         </form>
       </div>

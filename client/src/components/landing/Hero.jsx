@@ -114,9 +114,14 @@ const Hero = () => {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4">
-            <button className="bg-brand-primary text-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded text-xs sm:text-sm md:text-base font-semibold hover:bg-cyan-400 transition w-full sm:w-auto">
+            <a
+              href="https://calendly.com/bitwisdomai/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-primary text-black px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 rounded text-xs sm:text-sm md:text-base font-semibold hover:bg-cyan-400 transition w-full sm:w-auto text-center inline-block"
+            >
               Schedule A Callback
-            </button>
+            </a>
           </div>
         </div>
 

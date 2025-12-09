@@ -43,6 +43,8 @@ const EbayStoreSection = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
+        cache: "no-store",
+        mode: "cors",
       });
 
       const data = await response.json();
