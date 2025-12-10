@@ -34,18 +34,18 @@ const CryptoNodeSection = () => {
         <ul className="space-y-4 sm:space-y-5 md:space-y-6 text-gray-200 text-left md:text-right">
           <li>
             <span className="text-cyan-400 font-semibold text-xs sm:text-sm md:text-base">
-              💠 Over 1 Billion Crypto Holders (2025 Forecast)
+              💠 Over 2 Billion Crypto Holders (2026 Forecast)
             </span>
             <p className="text-gray-400 text-xs sm:text-sm mt-1">
-              The number of global crypto users has exploded — rising from
-              250M to 1B in just a few years. Ignoring this customer base
-              means leaving money on the table.
+              The number of worldwide crypto users has exploded — rising from
+              250M to 2B in just a few years. Ignoring this customer base means
+              leaving money on the table.
             </p>
           </li>
 
           <li>
             <span className="text-cyan-400 font-semibold text-xs sm:text-sm md:text-base">
-              💠 $4.5 Billion in Crypto Payments (Q1 2025 Alone)
+              💠 $225 Billion in Crypto Payments (Q3 2025 Alone)
             </span>
             <p className="text-gray-400 text-xs sm:text-sm mt-1">
               Businesses around the world are already embracing crypto. Don't
@@ -55,11 +55,11 @@ const CryptoNodeSection = () => {
 
           <li>
             <span className="text-cyan-400 font-semibold text-xs sm:text-sm md:text-base">
-              💠 40% of Gen Z & Millennials Plan to Use Crypto for Payments in
-              2025
+              💠 70% of Gen Z & Millennials Plan to Use Crypto for Payments in
+              2026
             </span>
             <p className="text-gray-400 text-xs sm:text-sm mt-1">
-              A massive shift in consumer behavior is underway. 1 in 10 say
+              A massive shift in consumer behavior is underway. 1 in 4 say
               they'll use crypto regularly for purchases.
             </p>
           </li>
@@ -69,9 +69,9 @@ const CryptoNodeSection = () => {
               💠 Save Your Merchants More with Every Transaction
             </span>
             <p className="text-gray-400 text-xs sm:text-sm mt-1">
-              Crypto transaction fees are 50–90% lower than traditional
-              payment processors — a win-win for everyone with more profit
-              straight to your merchant's bottom line.
+              Crypto transaction fees are 50–90% lower than traditional payment
+              processors — a win-win for everyone with more profit straight to
+              your merchant's bottom line.
             </p>
           </li>
         </ul>
